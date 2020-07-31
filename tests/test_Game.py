@@ -1,5 +1,5 @@
 import unittest
-from level2.cardMultiplayers import *
+from card.cardMultiplayers import *
 
 class TestPlayer(unittest.TestCase):
     def test_determineWiner(self):

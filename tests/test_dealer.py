@@ -1,5 +1,5 @@
 import unittest
-from card0 import *
+from card import *
 
 class TestDealer(unittest.TestCase):
     def test_getHandValue(self):

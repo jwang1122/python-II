@@ -1,5 +1,5 @@
 import unittest
-from level2.card import *
+from card import *
 
 class TestPlayer(unittest.TestCase):
     def test_getHandValue(self):

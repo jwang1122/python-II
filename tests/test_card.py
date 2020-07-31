@@ -1,5 +1,5 @@
 import unittest
-from level2.card import *
+from card import *
 
 class TestBlackJackCard(unittest.TestCase):
     def test_faces(self):
@@ -13,10 +13,10 @@ class TestBlackJackCard(unittest.TestCase):
         self.assertEqual(c1.getValue(), 10)
         c1 = Card("A","Diamonds")
         c2 = Card("2", "Hearts")
-        self.assertEqual(c2<c1, True)
+        self.assertEqual(c2>c1, True)
         c1 = Card("Q","Diamonds")
         c2 = Card("J", "Hearts")
-        self.assertEqual(c2<c1, False)
+        self.assertEqual(c2>c1, False)
         self.assertEqual(c1+c2, 23)
     
     def test_EqualValue(self):
