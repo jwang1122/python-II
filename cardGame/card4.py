@@ -3,7 +3,8 @@ Multi-players vs Dealer Black Jack Card Game
 with decision table to get rid of if-else
 """
 import random
-from cardDecision import decisionTable
+from cardGame.cardDecision import decisionTable
+
 
 class Card:
     def __init__(self, face, suit):
@@ -15,23 +16,30 @@ class Card:
 
     def __lt__(self, other):
         return self.getValue() < other.getValue()
+
     def __gt__(self, other):
         return self.getValue() > other.getValue()
+
     def __eq__(self, other):
         return self.getValue() == other.getValue()
-    
+
+    def __add__(self, other):
+        return self.getValue() + other.getValue()
+
     def getValue(self):
-        d1 = {"A":1, "J":11, "Q":12, "K":13}
+        d1 = {"A": 1, "J": 11, "Q": 12, "K": 13}
         if self.face.isdigit():
             return int(self.face)
         return d1.get(self.face)
 
+
 class BlackJackCard(Card):
     def getValue(self):
-        d1 = {"A":11, "J":10, "Q":10, "K":10}
+        d1 = {"A": 11, "J": 10, "Q": 10, "K": 10}
         if self.face.isdigit():
             return int(self.face)
         return d1.get(self.face)
+
 
 class Deck:
     FACES = ("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
@@ -58,14 +66,16 @@ class Deck:
         random.shuffle(self.stackOfCards)
         self.topCardIndex = 52
 
+
 class Player:
     def __init__(self, name):
         self.name = name
         self.hand = []
         self.win = 0
-    
+
     def __repr__(self):
-        return self.name + ": " + str(self.hand) + ": " + str(self.getHandValue()) + ": win " + str(self.win)
+        return self.name + ": " + str(self.hand) + ": " + str(
+            self.getHandValue()) + ": win " + str(self.win)
 
     def addCardToHand(self, card):
         self.hand.append(card)
@@ -98,10 +108,12 @@ class Player:
         self.win += 1
 
     def showHand(self):
-        return self.name + ": " + str(self.hand) + ": " + str(self.getHandValue())
+        return self.name + ": " + str(self.hand) + ": " + str(
+            self.getHandValue())
 
     def getHandSize(self):
         return len(self.hand)
+
 
 class Dealer(Player):
     def __init__(self):
@@ -132,6 +144,7 @@ class Dealer(Player):
     def shuffle(self):
         self.deck.shuffle()
 
+
 class Game:
     def __init__(self):
         self.players = []
@@ -149,17 +162,17 @@ class Game:
 
     def getAction(self, key):
         switcher = {
-            "dealer":self.dealerIncreaseWin,
-            "player":self.playerIncreaseWin
+            "dealer": self.dealerIncreaseWin,
+            "player": self.playerIncreaseWin
         }
         return switcher.get(key)
 
     def addPlayer(self, player):
-        self.players.append(player) 
+        self.players.append(player)
 
     def dealCardToAllPlayers(self):
         count = 0
-        while count<2:
+        while count < 2:
             for p in self.players:
                 p.addCardToHand(self.dealer.deal())
             self.dealer.addCardToHand(self.dealer.deal())
@@ -179,7 +192,17 @@ class Game:
         dealerTotal = self.dealer.getHandValue()
         for player in self.players:
             playerTotal = player.getHandValue()
-            self.getAction(decisionTable.get(str(playerTotal)+":"+str(dealerTotal)))(player)
+            self.getAction(
+                decisionTable.get(str(playerTotal) + ":" +
+                                  str(dealerTotal)))(player)
+
+    def isDealerWin(self, playerTotal, dealerTotal):
+        return decisionTable.get(str(playerTotal) + ":" +
+                              str(dealerTotal)) == 'dealer'
+
+    def isPlayerWin(self, playerTotal, dealerTotal):
+        return decisionTable.get(str(playerTotal) + ":" +
+                              str(dealerTotal)) == 'player'
 
     def showResults(self):
         for p in self.players:
@@ -202,7 +225,7 @@ class Game:
         while not gameOver:
             self.dealer.shuffle()
             self.cleanAllPlayerHand()
-            
+
             self.dealCardToAllPlayers()
             self.showAllPlayerHand()
 
@@ -210,7 +233,7 @@ class Game:
                 while p.hit():
                     p.addCardToHand(self.dealer.deal())
                     print(p.showHand())
-            
+
             while self.dealer.hit():
                 self.dealer.addCardToHand(self.dealer.deal())
 
@@ -220,7 +243,6 @@ class Game:
             answer = input("Do you want to play again? (y or n) ").lower()
             if answer != 'y':
                 gameOver = True
-
 
 if __name__ == '__main__':
     game = Game()

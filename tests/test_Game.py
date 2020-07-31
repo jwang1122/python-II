@@ -1,5 +1,5 @@
 import unittest
-from card.cardMultiplayers import *
+from cardGame.card4 import *
 
 class TestPlayer(unittest.TestCase):
     def test_determineWiner(self):
@@ -35,7 +35,7 @@ class TestPlayer(unittest.TestCase):
         game.determineWiner()
         self.assertEqual(ailian.win, 0)
         self.assertEqual(john.win, 0)
-        self.assertEqual(game.dealer.win, 0)
+        self.assertEqual(game.dealer.win, 2)
 
     def test_isDealerWin(self):
         game = Game()
@@ -56,5 +56,5 @@ class TestPlayer(unittest.TestCase):
         self.assertFalse(game.isPlayerWin(24, 21))
         self.assertFalse(game.isPlayerWin(21, 21))
         self.assertFalse(game.isPlayerWin(10, 18))
-        self.assertTrue(game.isPlayerWin(15, 10))
-        self.assertFalse(game.isPlayerWin(15, 15))
+        self.assertFalse(game.isPlayerWin(15, 16))
+        self.assertFalse(game.isPlayerWin(15, 17))

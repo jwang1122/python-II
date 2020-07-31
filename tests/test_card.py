@@ -1,5 +1,5 @@
 import unittest
-from card import *
+from cardGame.card4 import *
 
 class TestBlackJackCard(unittest.TestCase):
     def test_faces(self):
