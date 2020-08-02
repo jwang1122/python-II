@@ -1,3 +1,10 @@
+"""
+Usage of passing function to another function
+
+in this example: 
+pass circle_area() function to area() function
+or pass square_area() function to area() function
+"""
 def circle_area(r):
     return r**2*3.1416
 

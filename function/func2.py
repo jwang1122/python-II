@@ -1,18 +1,26 @@
 """
-返回功能块的妙用。
+define functions inside other functions
 """
-# def quadratic(a, b, c):
-#     return lambda x: a*x**2 + b*x + c
+def parent():
+    print("Printing from the parent() function")
 
-def quadratic(a, b, c):
-    def f(x):
-        return a*x**2 + b*x + c
-    return f
+    def first_child():
+        print("Printing from the first_child() function")
 
-f = quadratic(3, 2, 5)
-print("13:", type(f))
-print("14:", f(4))
+    def second_child():
+        print("Printing from the second_child() function")
 
-f2 = quadratic(2, 6, 1)
-print("17:", f2(4))
+    second_child()
+    first_child()
 
+def main():
+    """
+    >>> parent()
+    Printing from the parent() function
+    Printing from the second_child() function
+    Printing from the first_child() function
+    """
+if __name__ == '__main__':
+    # import doctest
+    # doctest.testmod()
+    parent()

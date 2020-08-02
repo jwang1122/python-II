@@ -1,3 +1,7 @@
+"""
+function can be passed to another function.
+
+"""
 def f1(x):
     return 3*x + 2
 
