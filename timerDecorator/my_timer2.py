@@ -10,6 +10,7 @@ def my_timer(original):
         t2 = time.time() - t1
         print(f'11: {original.__name__} ran in {t2:.3f} seconds.')
         return result
+    wrapper.__name__ = original.__name__
     return wrapper
 
 # add @my_timer decorator to any function to measure the time spent on the function call
@@ -23,3 +24,4 @@ def display_info(name, age):
 # Call the function as usual, because we use the decorator @my_timer
 x = display_info("John", 23)
 print(x)
+print(display_info.__name__) # the name will be replaced by the wrapper function name
