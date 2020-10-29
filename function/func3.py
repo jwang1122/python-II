@@ -13,9 +13,10 @@ def parent(num):
     else:
         return second_child
 
-first = parent(1)
-second = parent(2)
-print(first)
-print(second)
-print(first())
-print(second())
+if(__name__ == "__main__"):
+    first = parent(1)
+    second = parent(2)
+    print(first)
+    print(second)
+    print(first())
+    print(second())

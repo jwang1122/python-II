@@ -1,4 +1,5 @@
 """
+r = map(function, sequence)
 map 2 list to one
 """
 l1 = list(range(1,11))

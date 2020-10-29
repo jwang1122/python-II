@@ -10,10 +10,11 @@ def quadratic(a, b, c):
         return a*x**2 + b*x + c
     return f
 
-f = quadratic(3, 2, 5)
-print("13:", type(f))
-print("14:", f(4))
+if(__name__ == "__main__"):
+    f = quadratic(3, 2, 5)
+    print("13:", type(f))
+    print("14:", f(4))
 
-f2 = quadratic(2, 6, 1)
-print("17:", f2(4))
+    f2 = quadratic(2, 6, 1)
+    print("17:", f2(4))
 
