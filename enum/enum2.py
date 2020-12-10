@@ -1,6 +1,6 @@
 import enum
 
-class Shake(enum.Enum):
+class Shake(enum.Enum): # both key and value must to be unique
     VANILLA = 7
     CHOCOLATE = 4
     COOKIES  = 9
