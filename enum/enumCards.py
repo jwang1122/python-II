@@ -58,9 +58,9 @@ if __name__ == '__main__':
     print(member.value)
     print(member.value + 11)
 
-    diamond9 = Card(Faces.NINE, Suits.DIAMOND)
-    print(diamond9)
-    print(diamond9.getValue())
+    diamondJ = Card(Faces.JACK, Suits.DIAMOND)
+    print(diamondJ)
+    print(f"Diamond Jack has value of {diamondJ.getValue()}")
 
     deck = Deck()
     pprint(deck.deck)
