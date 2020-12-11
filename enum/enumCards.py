@@ -1,11 +1,6 @@
 from enum import Enum
 from pprint import pprint
 
-"""
-Class level function
-Class level attribute
-"""
-
 
 class Suits(Enum):
     SPADE = 1
