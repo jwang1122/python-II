@@ -1,4 +1,6 @@
-from pymonad import *
+from pymonad.operators.maybe import Maybe, Just, Nothing
+from pymonad.either import *
+from pymonad.tools import curry, do
 
 def mdiv(a, b):
     if b == 0:

@@ -1,9 +1,9 @@
 """
-Return boxed tuple message.
-
+Return boxed tuple message either Right or Left.
+use myeither defined locally.
 isEven() function return either Right(success) or Lift(error)
 """
-from pymonad.either import Left, Right
+from myeither import *
 
 def isEven(x):
     if(type(x) not in [int]):
@@ -15,9 +15,9 @@ def isEven(x):
     reason = ('Error',"The x=%d mod of 2 equals 1." % x)
     return Left(reason)
 
-print(isEven(4))
-print(isEven(7))
-print(isEven(3.2))
-print(isEven(3+2j))
-print(isEven(-2))
+print(isEven(4).value)
+print(isEven(7).value)
+print(isEven(3.2).value)
+print(isEven(3+2j).value)
+print(isEven(-2).value)
 print("Done.")

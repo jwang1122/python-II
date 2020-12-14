@@ -1,4 +1,15 @@
-# Calculate Circle Area
+# Functional Programming
+
+## Topics
+* area.py; One area() function calculate more shapes area by if-else
+* area1.py; Use dict for decision table
+* area2.py; Use decision table from other module
+
+
+## References
+[Primer on python function](https://realpython.com/primer-on-python-decorators)
+
+## Calculate Circle Area
 
 ## Simple case without raise exception
 
@@ -25,3 +36,4 @@ try:
 except ImportError:
     print('Module not found')
 ```
+

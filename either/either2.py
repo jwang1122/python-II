@@ -1,4 +1,7 @@
-from pymonad import *
+from pymonad.either import Left, Right
+from pymonad.operators import *
+from pymonad.operators.maybe import Just
+
 """
 bind function list, terminated during error out in the middle.
 重要的 Web Service 编程理念：
@@ -35,14 +38,14 @@ def sub4(x):
 
 print("36:", isEven(3).bind(add5))
 print("37:", isEven(4).bind(add5))
-print("38:", isEven(5).bind(add5).bind(sub4).value)
-print("39:", isEven(4).bind(sub4).bind(add5).bind(sub4).value)
-print("40:", (isEven(10) >> sub4 >> add5).value)
+print("38:", isEven(5).bind(add5).bind(sub4))
+print("39:", isEven(4).bind(sub4).bind(add5).bind(sub4))
+print("40:", Right(10).bind(isEven).bind(sub4).bind(add5))
 
 
 def f1(x):  
     # define all things need to do in a chain, if-else still in place of each function
-    return isEven(x) >> sub4 >> add5 >> sub4 >> add5
+    return isEven(x).bind(sub4).bind(add5).bind(sub4).bind(add5)
 
 print("47:", f1(2.3+4j))
 print("48:", f1(11).value)

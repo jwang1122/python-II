@@ -1,6 +1,5 @@
 from math import pi
 
-
 def circle_area(radius: float) -> float:
     """
     Calculate circle area with given radius.

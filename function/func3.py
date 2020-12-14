@@ -1,5 +1,6 @@
 """
 Return a function from function
+https://realpython.com/primer-on-python-decorators/
 """
 def parent(num):
     def first_child():

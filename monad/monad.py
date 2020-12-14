@@ -1,43 +1,7 @@
-from pymonad.operators.maybe import Maybe, Just, Nothing
-from pymonad.either import *
-from pymonad.tools import curry
 
-# Functor "Just" implements fmap
-def sayHello(person):
-    return f"Hello, {person}!"
 
-print("09:", sayHello("John"))
-print("10:", sayHello(Just("World")))
-print(type(sayHello(Just("World"))))
-print("12:", sayHello * Just("World")) # Just是一个Functor，implement fmap功能块，使得普通的功能块可以使用*作用其上
-print(type(sayHello * Just("World")))
-print("14:", sayHello * Just(None))
-x = Just("Wang").map(sayHello)
-print("16:",x)
 
-# # Applicative amap
-@curry
-def add(x, y):
-    return x + y
 
-x = add * Just(7) & Just(8) # Just是一个Applicative，implement amap功能块，使得打包功能块作用于其上*相当（，&相当，
-print("24:",x)
-# x = Just(7).fmap(add).amap(Just(8))
-# print("24:",x)
-
-# x = add(7, 8) # 打包的功能块可以正常使用
-# print("27: ", end=' ')
-# print(type(x))
-# print("29: x =", x)
-
-# x=add(Just(7), Just(8)) # 打包功能块可以直接接受打包变量
-# print("32:", x)
-
-# x=add(7)# 打包功能块可以先只传递一个变量
-# print("35: ", end=' ')
-# print(type(x))
-# x=x (8)  # 再传递另外一个变量
-# print("38: x = ", x)
 
 # list1=[1,2,3,4,5]
 # @curry
