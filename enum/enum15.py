@@ -1,12 +1,12 @@
 from enum import Enum, auto
 
 class NoValue(Enum):
-    def __repr__(self):
+    def __str__(self):
         return '<%s.%s>' %(self.__class__.__name__, self.name)
 
 class AutoNumber(NoValue):
     """
-    The major difference between these two methods is 
+    The major difference between __init__() and __new__() is 
     that __new__ handles object creation and 
     __init__ handles object initialization.
     """

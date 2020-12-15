@@ -1,5 +1,47 @@
 # 华夏中文学校 Python level2
 
+## enum
+* enum1.py; Color extends from Enum, value, type...
+* enum2.py; key and value unique
+* enum3.py; duplicated key
+* enum4.py; use name for key, ordered list
+* enum5.py; use @unique decorator
+* enum6.py; use auto() function for value if you don't care the value
+* enum7.py; override _generate_next_value_() function use name as enum value
+* enum8.py; compare enum by "is" or "is not"
+* enum9.py; define function in enum
+* enum10.py; callable Enum()
+* enum11.py; use enum name or value as list index
+* enum12.py; IntFlag enum can be used for bitwise operations
+* enum13.py; add more value to enum
+* enum14.py; generate value by using auto(), Object(), str. Practice use name as value
+* enum15.py; generate squence number as enum value __new__()
+* enum16.py; same as above, __init__()
+* enum17.py; implements __gt__, __lt__,__ge__, __le__ function for enum comparison
+
+## either
+* either1.py; isEven() function return Either Right or Left
+* either2.py; isEven() check input data type
+* either3.py; bind multiple functions
+
+## monad
+* circle1.py; calculate circle area without type checking. __doc__()
+* circle2.py; raise exception when input data has wrong type. application terminated in middle
+* circle2test.py; surround with try-except to avoid termination
+* circle3.py; return Either Right or Left for circle area calculation. better for web service.
+### Concepts
+* Functor: Wrapper Class type with implementation of fmap() function. Functor-Map 
+* Applicative: Wrapper Class type with implementation of fmap(), amap() functions. Applicative-Map 
+* Monad: Wrapper Class type with implementation of fmap(), amap() and bind() functions. 
+![Functor, Applicative, Monad](./images/monad.png)
+* functor.py; add3 * Just(2)
+* applicative.py; add * Just(3) & Just(2)
+* monad.py; Just(2) >> add3 >> mul4
+
+![Reactive Action](./images/ReactiveAction.gif)
+
+
+
 ## References
 [Python Interface](https://realpython.com/python-interface/)
 [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)

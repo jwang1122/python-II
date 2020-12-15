@@ -11,7 +11,7 @@ class Shapes(IntEnum):
     CIRCLE=1
     SQUARE=4
     HEXAGONE=6
-    PENTAGON=6
+    PENTAGON=5
     TRIANGLE=3
 
 if __name__ == '__main__':

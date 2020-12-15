@@ -17,3 +17,8 @@ if __name__ == '__main__':
 
     for name, member in Ordinal.__members__.items():
         print(name, member)
+    
+    for o in Ordinal:
+        x = o.value
+        print(type(x))
+        print(x)

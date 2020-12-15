@@ -17,3 +17,7 @@ if __name__ == '__main__':
     print(Shapes(4)) # use value find key
     print(Shapes.ALIAS_FOR_SQUARE)
     print(Shapes['PENTAGON']) # item slice
+
+    print()
+    for shape in Shapes: # ordered list
+        print(shape)
