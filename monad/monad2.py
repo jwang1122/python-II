@@ -13,7 +13,7 @@ print(add(2, 3))
 print(mul(2,3))
 
 # 最终目的是要连续执行的形式。
-add2 = add * Just(2) & Just(8)
+add2 = add * Just(2) & Just(8) # Applicative
 print(add2)
 
 mul2 = mul * Just(5) & Just(9)

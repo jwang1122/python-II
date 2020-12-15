@@ -39,6 +39,19 @@
 * monad.py; Just(2) >> add3 >> mul4
 
 ![Reactive Action](./images/ReactiveAction.gif)
+* monad1.py; understand Functor
+* monad2.py; understand Applicative
+* monad3.py; applicative regular call
+* monad4.py; function compose
+* monad5.py; more compose on list.
+* option1.py; understand implementation of Option by using mymonad.py
+* option2.py; Rx: Reactive x to write function chain.
+* monad6.py; Nothing > wrapper None with Maybe
+* monad7.py; _List.map(), _List.then()
+* monad8.py; normal function don't know how to handle wrappered variables.
+* monad9.py; bind list function
+* monad10.py; bind list function
+* monad11.py; Use Maybe solve the None issue
 
 
 
@@ -46,6 +59,8 @@
 [Python Interface](https://realpython.com/python-interface/)
 [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
 [Primer on python function](https://realpython.com/primer-on-python-decorators)
+
+<img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 
 ## 2020-07-30 
 * sqlite database (continue)

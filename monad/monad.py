@@ -7,11 +7,14 @@ def add3(number):
 def mul4(number):
     return Just(number * 4)
 
-x = Just(2) >> add3 >> mul4
+def half(number):
+    return Just(number/2)
+
+x = Just(2) >> add3 >> half #链式运行结构
 print(x)
 
 def f1(number):
-    return Just(number) >> add3 >> mul4
+    return Just(number) >> add3 >> mul4 >> half
 
 x = f1(11)
 print(x)

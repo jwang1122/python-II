@@ -8,7 +8,7 @@ def mul_3(x):
 
 # Creates a new function that first adds 1, then multiplies by 3, and
 # finally converts the result to a string.
-new_func = (Compose(add_1)
+new_func = (Compose(add_1) #链式运行结构
             .then(mul_3)
             .then(str)
 )
