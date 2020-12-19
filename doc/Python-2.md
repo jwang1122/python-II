@@ -23,6 +23,7 @@
 * either1.py; isEven() function return Either Right or Left
 * either2.py; isEven() check input data type
 * either3.py; bind multiple functions
+* airlineseat.py; 
 
 ## monad
 * circle1.py; calculate circle area without type checking. __doc__()
@@ -52,7 +53,6 @@
 * monad9.py; bind list function
 * monad10.py; bind list function
 * monad11.py; Use Maybe solve the None issue
-
 
 
 ## References
