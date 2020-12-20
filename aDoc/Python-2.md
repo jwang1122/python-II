@@ -1,5 +1,23 @@
 # 华夏中文学校 Python level2
 
+## Python 编写应用软件的几大要素
+1. logging ([Java Logging](#Logging))
+2. Unit test ([Unit Test](#JUnittest))
+3. Document ([Java Doc](#Java-Doc))
+4. Database Access ([Sqlite](#Sqlite))
+5. Source Version Control ([Git](#Git))
+
+## Table of Contents
+1. [Sqlite](#Sqlite)
+1. [enum](#enum)
+1. [either](#either)
+1. [monad](#monad)
+1. [References](#References)
+1. [Blackjack Card Game](#Blackjack-Card-Game)
+1. [Design Pattern](#Design_Pattern)
+1. [Understand Dunder Functions](#Understand-Dunder-Functions)
+1. [](#)
+
 ## enum
 * enum1.py; Color extends from Enum, value, type...
 * enum2.py; key and value unique
@@ -18,12 +36,17 @@
 * enum15.py; generate squence number as enum value __new__()
 * enum16.py; same as above, __init__()
 * enum17.py; implements __gt__, __lt__,__ge__, __le__ function for enum comparison
+---
+[Table of Contents](#Table-of-Contents)
 
 ## either
 * either1.py; isEven() function return Either Right or Left
 * either2.py; isEven() check input data type
 * either3.py; bind multiple functions
 * airlineseat.py; 
+---
+[Table of Contents](#Table-of-Contents)
+
 
 ## monad
 * circle1.py; calculate circle area without type checking. __doc__()
@@ -53,17 +76,112 @@
 * monad9.py; bind list function
 * monad10.py; bind list function
 * monad11.py; Use Maybe solve the None issue
+---
+[Table of Contents](#Table-of-Contents)
+
+## Blackjack Card Game
+* Keep in mind, always test your code with small unit.
+    - CardTestOne.py
+    - DealerTest.py
+    - DectTest.py
+    - PlayerTest.py
+    - PlayerTestOne.py
+
+* BlackJack Card Game document
+    [Black Jack](https://next.tech/projects/94217701d98d/share)
+* card.py
+    - class Card:
+    - class BlackJackCard(Card):
+* ./cardGame/blackjack.py; > sample code online.
+* ./cardGame/blackjack2.py; > another implementation
+* ./cardGame/card0.py; single player agains dealer
+    - class Card(ABC):
+    - class BlackJackCard(Card):
+    - class Deck:
+    - class Player:
+    - class Dealer(Player):
+    - def playGame():
+* ./cardGame/card1.py; Multi-Players vs Dealer Black Jack Card Game
+
+* ./cardGame/card2.py; Multi-players vs Dealer Black Jack Card Game
+without if-else
+* ./cardGame/card3.py; with decision table
+* ./cardGame/card4.py; with decision table to get rid of if-else
+* tableBuilder.py; build cardDecision.py to determin who is winner
+* test the result
+---
+[Table of Contents](#Table-of-Contents)
+
+## Design Pattern
+* command.py
+* command5.py
+* decorator.py
+* decorator0.py
+* decorator1.py
+* decorator2.py
+* decorator3.py
+* decorator4.py
+* iterator.py
+* observer.py
+* strategy.py
+* strategy2.py
+---
+[Table of Contents](#Table-of-Contents)
+
+## Understand Dunder Functions
+* dunder1.py
+* limitUser.py
+* range1.py
+*
+---
+[Table of Contents](#Table-of-Contents)
 
 
 ## References
-[Python Interface](https://realpython.com/python-interface/)
-[__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
-[Primer on python function](https://realpython.com/primer-on-python-decorators)
+1. [Python Interface](https://realpython.com/python-interface/)
+1. [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
+1. [Primer on python function](https://realpython.com/primer-on-python-decorators)
+1. [Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
 
 <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
+---
+[Table of Contents](#Table-of-Contents)
 
-## 2020-07-30 
-* sqlite database (continue)
+## Sqlite
+* sqlite0.py > create connection
+* sqlite1.py
+* sqlite2.py
+* install DB browser for SQLite
+
+Google Search: DB Browser for Sqlite
+
+[SQLite GUI Download Website](https://sqlitebrowser.org/dl/)
+
+[SQLite Browser for MacOS](https://sqlitebrowser.org/blog/macos-installer-rebuilt-for-3-11-1/)
+
+File: DB.Browser.for.SQLite-3.12.1-win64-v2.msi
+
+![Runing Image](images/sqlite.png)
+* sqlite4.py
+* sqlite5.py
+* sqlite6.py
+
+![Relation between Project and tasks](./images/entity.png)
+
+* sqlite7.py > build relational data
+* sqlite8.py > show relation between project and task
+
+![projects - tasks](images/projects-tasks.png)
+
+* review bookdb.py
+* sqlite9.py > create books table
+* sqlite10.py > insert data into books table
+* sqlitebookdb.py > build CRUD
+* app5.py > use sqlitebookdb.py to provide service
+    use Postman to check the service.
+---
+[Table of Contents](#Table-of-Contents)
+
 ![Relational DB](./images/entity.png)
     - sqlite5.py
     - sqlite6.py
@@ -80,6 +198,7 @@ def addOver5(x, y):
     return x + y
 ```
     - assert
+
     ![Try-except](./images/try-except.webp)
     [Practice]: indexOutBound.py
     - Write unit test
@@ -341,7 +460,6 @@ do different test, show program terminated in the middle
     - try-catchTest1.py (optimize code)
  
 
-[Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
 
 老生
 总校

@@ -1,4 +1,4 @@
-from level2.card import *
+from card0 import *
 
 dealer = Dealer()
 player = Player("John")

@@ -1,4 +1,4 @@
-from card import *
+from card0 import *
 
 deck = Deck()
 
