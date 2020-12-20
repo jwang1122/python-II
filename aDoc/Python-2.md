@@ -13,11 +13,13 @@
 1. [Functional Programming](#Functional-Programming)
 1. [either](#either)
 1. [monad](#monad)
-1. [References](#References)
 1. [Blackjack Card Game](#Blackjack-Card-Game)
 1. [Design Pattern](#Design_Pattern)
 1. [Understand Dunder Functions](#Understand-Dunder-Functions)
 1. [](#)
+1. [](#)
+1. [](#)
+1. [References](#References)
 
 ## enum
 * enum1.py; Color extends from Enum, value, type...
@@ -172,16 +174,6 @@ without if-else
 [Table of Contents](#Table-of-Contents)
 
 
-## References
-1. [Python Interface](https://realpython.com/python-interface/)
-1. [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
-1. [Primer on python function](https://realpython.com/primer-on-python-decorators)
-1. [Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
-
-<img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
----
-[Table of Contents](#Table-of-Contents)
-
 ## Sqlite
 * sqlite0.py > create connection
 * sqlite1.py
@@ -217,11 +209,15 @@ File: DB.Browser.for.SQLite-3.12.1-win64-v2.msi
 ---
 [Table of Contents](#Table-of-Contents)
 
-![Relational DB](./images/entity.png)
-    - sqlite5.py
-    - sqlite6.py
-    - sqlite7.py > build relational data
-    - sqlite8.py > show relation between project and task
+## References
+1. [Python Interface](https://realpython.com/python-interface/)
+1. [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
+1. [Primer on python function](https://realpython.com/primer-on-python-decorators)
+1. [Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
+
+1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
+---
+[Table of Contents](#Table-of-Contents)
 
 * Review
     - Handle Exception try-except 
