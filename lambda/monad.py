@@ -16,7 +16,7 @@ x = Just("Wang").map(sayHello)
 print("16:",x)
 
 # # Applicative amap
-@curry
+@curry(2)
 def add(x, y):
     return x + y
 

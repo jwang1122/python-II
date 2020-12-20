@@ -1,7 +1,7 @@
 """
 bind operation on functional programing
 """
-from pymonad import *
+from pymonad.operators.maybe import Just, Nothing
 
 def openVSCode(x):
     return Just("\n" + x+" Open VSCode application.")

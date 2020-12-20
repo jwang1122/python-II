@@ -1,4 +1,5 @@
-from pymonad import *
+from pymonad.operators.maybe import Just, Nothing
+from pymonad.list import *
 
 def writeShoppingList(x):
     return Just("\n" + x+" prepare shopping list.")
@@ -16,16 +17,16 @@ def driveBackHome(x):
     return Just(x + "\nDrive home.")
 
 x= Just("John ") >> writeShoppingList >> driveToMarket >> checkout >> driveBackHome
-print("11:",x)
+print("20:",x)
 
-list1 = List(writeShoppingList, driveToMarket,findThing,checkout,driveBackHome)
+list1 = ListMonad(writeShoppingList, driveToMarket,findThing,checkout,driveBackHome)
 x = Just("Wei")
 for f in list1:
     x = x >> f
 
-print(x)
+print("27:",x)
 
-persons = List("John", "Wei", "Jun")
+# persons = ["John", "Wei", "Jun"]
+# map(lambda p: Just(p) >> writeShoppingList >> driveToMarket >> checkout >> driveBackHome, persons)
 
-# x = persons >> list1
-# print(x)
+print("Done.")

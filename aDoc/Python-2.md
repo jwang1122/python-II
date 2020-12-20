@@ -10,6 +10,7 @@
 ## Table of Contents
 1. [Sqlite](#Sqlite)
 1. [enum](#enum)
+1. [Functional Programming](#Functional-Programming)
 1. [either](#either)
 1. [monad](#monad)
 1. [References](#References)
@@ -38,6 +39,40 @@
 * enum17.py; implements __gt__, __lt__,__ge__, __le__ function for enum comparison
 ---
 [Table of Contents](#Table-of-Contents)
+
+## Functional Programming
+
+![Lambda Function](./images/lambda.png)
+
+./lambda/...
+* func.py; pass function to function
+* lambda.py; 
+* lambda1.py;
+
+![map()](./images/map.png)
+* map0.py; two variables lambda function
+* map1.py; convert city temperatures
+* map2.py; define the lambda function outside
+* map3.py; two variables lambda action on two list
+* map4.py; convert list of temperatures
+* map5.py; more variables for lambda function
+* map6.py; create Card set by using lambda function
+* filter0.py; reduce the size of list by certain condition
+* filter1.py; reduce the list of temperatures by condition
+* filter2.py; find prime by filter function
+* reduce.py; use reduce to do sum
+* reduce1.py; use reduce to find min and max
+* kleisliCompose.py; Compose two functions
+* sort0.py; sort by string or object attribute
+* sort1.py; sorted vs. sort
+* sort2.py; sort temperature
+* sort3.py; sort tuple
+* sumByTuple.py; 
+* zip1.py; zip two list
+* zip2.py; sum zipped list
+* zip3.py; 
+* ./lambda/shoppingMonad.py (use list bind functions)
+* ./lambda/writePythonMonad.py (use monad bind functions)
 
 ## either
 * either1.py; isEven() function return Either Right or Left
