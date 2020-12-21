@@ -16,6 +16,6 @@ def func1(a):
 def func2(a):
     print("inside func2()", a)
 
-
-func1(10)
-func2(15)
+if __name__ == '__main__':
+    func1(10)
+    func2(15)

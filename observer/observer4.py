@@ -1,6 +1,8 @@
 import rx
 from rx import operators as ops
-
+"""
+customer operators
+"""
 def length_more_than_5():
     return rx.pipe(
         ops.map(lambda s: len(s)),

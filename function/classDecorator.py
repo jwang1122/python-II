@@ -1,3 +1,8 @@
+"""
+dunder __call__
+understand function decorator
+
+"""
 class my_decorator(object):
 
     def __init__(self, f):
@@ -11,6 +16,8 @@ class my_decorator(object):
 def aFunction():
     print("inside aFunction()")
 
-print("Finished decorating aFunction()")
+if __name__ == '__main__':
+    aFunction()
 
-aFunction()
+    print("Finished decorating aFunction()")
+

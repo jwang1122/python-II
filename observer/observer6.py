@@ -1,49 +1,20 @@
-import multiprocessing
-import random
-import time
-from threading import current_thread
-
 import rx
-from rx.scheduler import ThreadPoolScheduler
-from rx import operators as ops
+"""
+rx.create function example
+"""
+def f(observer, scheduler):
+    observer.on_next(1)
+    observer.on_next(2)
+    observer.on_next(3)
+    observer.on_completed()
 
+x = rx.create(f)
 
-def intense_calculation(value):
-    # sleep for a random short duration between 0.5 to 2.0 seconds to simulate a long-running calculation
-    time.sleep(random.randint(5, 20) * 0.1)
-    return value
+x.subscribe(print)
 
-
-# calculate number of CPUs, then create a ThreadPoolScheduler with that number of threads
-optimal_thread_count = multiprocessing.cpu_count()
-pool_scheduler = ThreadPoolScheduler(optimal_thread_count)
-
-# Create Process 1
-rx.of("Alpha", "Beta", "Gamma", "Delta", "Epsilon").pipe(
-    ops.map(lambda s: intense_calculation(s)), ops.subscribe_on(pool_scheduler)
-).subscribe(
-    on_next=lambda s: print("PROCESS 1: {0} {1}".format(current_thread().name, s)),
-    on_error=lambda e: print(e),
-    on_completed=lambda: print("PROCESS 1 done!"),
+test = rx.empty()
+test.subscribe(
+   lambda x: print("The value is {0}".format(x)),
+   on_error = lambda e: print("Error : {0}".format(e)),
+   on_completed = lambda: print("Job Done!")
 )
-
-# Create Process 2
-rx.range(1, 10).pipe(
-    ops.map(lambda s: intense_calculation(s)), ops.subscribe_on(pool_scheduler)
-).subscribe(
-    on_next=lambda i: print("PROCESS 2: {0} {1}".format(current_thread().name, i)),
-    on_error=lambda e: print(e),
-    on_completed=lambda: print("PROCESS 2 done!"),
-)
-
-# Create Process 3, which is infinite
-rx.interval(1).pipe(
-    ops.map(lambda i: i * 100),
-    ops.observe_on(pool_scheduler),
-    ops.map(lambda s: intense_calculation(s)),
-).subscribe(
-    on_next=lambda i: print("PROCESS 3: {0} {1}".format(current_thread().name, i)),
-    on_error=lambda e: print(e),
-)
-
-input("Press any key to exit\n")

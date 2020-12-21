@@ -1,5 +1,7 @@
 from rx import of, operators as op
-
+"""
+operators
+"""
 source = of("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
 
 composed = source.pipe(

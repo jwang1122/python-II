@@ -10,7 +10,7 @@ log_format = '%(asctime)s %(levelname)5s [%(name)s] - %(message)s::%(filename)s:
 logging.basicConfig(filename='mylogs.log', filemode='w', level=logging.DEBUG, format=log_format)
 logger = logging.getLogger('WANG')
 
-from pymonad import *
+from pymonad.either import *
 
 def isEven(x):
     if(type(x) not in [int]):
@@ -28,9 +28,10 @@ def handler(x):
     else:
         logger.info(x)
     
-
-handler * isEven(4)
-handler * isEven(7)
-handler(isEven(3.2))
-handler(isEven(3+2j))
-handler(isEven(-2))
+if __name__ == '__main__':
+    isEven(4).bind(handler)
+    isEven(7).bind(handler)
+    handler(isEven(3.2))
+    handler(isEven(3+2j))
+    handler(isEven(-2))
+    print("Done.")

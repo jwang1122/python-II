@@ -1,5 +1,7 @@
 from areaTable import *
-
+"""
+use decision table
+"""
 def unsupportedArea(mod):
     print("Unsupported area calculation mod: [%s] ..." %mod)
     return 0

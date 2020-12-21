@@ -1,5 +1,7 @@
 import rx
-
+"""
+Create an operator that is not a composition of other operators
+"""
 def lowercase():
     def _lowercase(source):
         def subscribe(observer, scheduler = None):

@@ -15,5 +15,6 @@ def switch(argument):
     }
     return switcher.get(argument, "Invalid month")
 
-print(switch(2))
-print(switch(13))
+if __name__ == '__main__':
+    print(switch(2))
+    print(switch(13))

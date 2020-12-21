@@ -11,6 +11,8 @@
 1. [Sqlite](#Sqlite)
 1. [enum](#enum)
 1. [Functional Programming](#Functional-Programming)
+1. [Lambda Expression](#Lambda-Expression)
+1. [Rx Observer](#Observer)
 1. [either](#either)
 1. [monad](#monad)
 1. [Blackjack Card Game](#Blackjack-Card-Game)
@@ -43,7 +45,32 @@
 [Table of Contents](#Table-of-Contents)
 
 ## Functional Programming
+./function
+* variableArgs.py; variable arguments
+* func.py; pass function to function, return function from function
+* func0.py; another sample for passing and return function
+* func1.py; calculate area by passing function to function
+* func2.py; inner function: define function in function
+* func3.py; return function from function conditionally
+* func4.py; use parameter generate different math function
+* func5.py; use one function to do sample math
+* funcAttribute.py; getattr()
+* funcEither.py; Left/Right with logging
+* area1.py; if-else calculate areas
+* area2.py(areaTable.py)
+* classDecorator.py; 
+* decoratorFunctionWithArguments
+* decoratorWithArguments.py
+* defineFunction.py;
+* entry_exit1.py; @entry_exit
+* entry_exit2.py; @entry_exit __init__() __call__()
+* switch.py; use Month as dict
+* switcher.py; store function in dict
+---
+[Table of Contents](#Table-of-Contents)
 
+
+## Lambda Expression
 ![Lambda Function](./images/lambda.png)
 
 ./lambda/...
@@ -73,7 +100,7 @@
 * zip1.py; zip two list
 * zip2.py; sum zipped list
 * zip3.py; 
-* ./lambda/shoppingMonad.py (use list bind functions)
+* ./lambda/shoppingMonad1.py (use list bind functions)
 * ./lambda/writePythonMonad.py (use monad bind functions)
 
 ## either
@@ -113,6 +140,46 @@
 * monad9.py; bind list function
 * monad10.py; bind list function
 * monad11.py; Use Maybe solve the None issue
+* shoppingMonad1.py; monad function chain
+* shoppingMonad2.py; combination of RX Observer and Monad
+* shoppingMonad3.py; monad with map
+* math1.py; monad function chain
+* math2.py; compination of Observer and Monad
+---
+[Table of Contents](#Table-of-Contents)
+
+## Rx Observer
+* observer0.py; typical observer function chain
+* observer1.py; simple way to create observer iterable
+* observer2.py; operators function chain with pipe (map > filter)
+* observer3.py; simplify observer2.py
+* observer4.py; chain everything together
+* observer5.py; internal function
+* observer8.py; complete observer function chain
+```
+on_next is called each time an item is received.
+on_completed is called when the observable completes on success.
+on_error is called when the Observable completes on error.
+```
+* observer9.py; disposible
+* observer10.py; error handlling
+
+    ![Railway Oriented Programing](./images/railway.png)
+* observer11.py; multiple thread asynchronized processing
+* observer12.py;
+* observer13.py;
+* observer14.py;
+* observer15.py;
+
+```
+python ./observer/observer12.py
+```
+after server start up
+```
+telnet localhost 8888
+foo
+```
+* observer13.py;
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -210,10 +277,14 @@ File: DB.Browser.for.SQLite-3.12.1-win64-v2.msi
 [Table of Contents](#Table-of-Contents)
 
 ## References
+1. [RxPY Document](https://rxpy.readthedocs.io/en/latest/index.html)
 1. [Python Interface](https://realpython.com/python-interface/)
 1. [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
 1. [Primer on python function](https://realpython.com/primer-on-python-decorators)
+1. [Observer Sample](https://www.tutorialspoint.com/rxpy/)
 1. [Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
+1. [Reactive X](https://blog.oakbits.com/introduction-to-rxpy.html)
+1. [Sqlite Tutorial](https://docs.python.org/3/library/sqlite3.html)
 
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 ---
@@ -257,22 +328,7 @@ def addOver5(x, y):
     - observer3.py
     - observer4.py
     - observer5.py
-## 2020-07-29 
-* Functional Programing (Continue)
-    - shoppingMonad.py (use list bind functions)
-    - writePythonMonad.py (use monad bind functions)
 
-* sqlite database
-[Tutorial](https://docs.python.org/3/library/sqlite3.html)
-    - sqlite0.py > create connection
-    - sqlite1.py
-    - sqlite2.py
-
-    - sqlite4.py
-    - sqlite5.py
-    - sqlite6.py
-    - sqlite7.py > build relational data
-    - sqlite8.py > show relation between project and task
 
 * design pattern
     - observer
@@ -280,7 +336,7 @@ def addOver5(x, y):
     - strategy
 
  
-## Functional Programing (Continue)
+## Functional Programming (Continue)
 * area.py
 * area1.py
 * area2.py(areaTable.py)
@@ -335,7 +391,6 @@ def addOver5(x, y):
     - my_timer1.py understand wrapper function
     - my_timer2.py
 
-* Functional Programming
 ---
 ## 2020-07-21
 * switch
