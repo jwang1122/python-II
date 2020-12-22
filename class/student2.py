@@ -1,6 +1,6 @@
-from person import *
+from person1 import *
 
-class student(person):
+class student(Person):
     def __init__(self, name, age, ssn, grade):
         super().__init__(name, age, ssn)
         self.grade = grade

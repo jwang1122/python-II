@@ -1,6 +1,6 @@
 from student2 import *
 
-class teacher(person):
+class teacher(Person):
     def assignHomework(self):
         print("assign new homework for stduents...")
     

@@ -1,4 +1,4 @@
-# 华夏中文学校 Python level2
+# 华夏中文学校 Python level-II
 
 ## Python 编写应用软件的几大要素
 1. logging ([Java Logging](#Logging))
@@ -8,6 +8,7 @@
 5. Source Version Control ([Git](#Git))
 
 ## Table of Contents
+1. [Git](#Git)
 1. [assert](#assert)
 1. [Command Line Arguments](#Command-Line-Arguments)
 1. [Sqlite](#Sqlite)
@@ -28,8 +29,30 @@
 1. [](#)
 1. [References](#References)
 
+## Git
+Source code version control
+* check git availability
+* get source code from GitHub
+* frequently used git command
+```
+git --version
+git config user.name "jwang1122"
+git config user.email "jwang1122@gmail.com"
+git status
+git add .
+git commit -m "some message"
+git push
+git pull
+git clone https://github.com/jwang1122/python2.git
+git log --oneline
+git branch
+```
+---
+[Table of Contents](#Table-of-Contents)
+
 ## assert
 ![Python Keywords](./images/python-keywords.png)
+
     - [Practice]: write program using keywords we have learned.
 * assert0.py
 * assert1.py
@@ -80,7 +103,7 @@
 ---
 [Table of Contents](#Table-of-Contents)
 
-## OOP programming
+## OOP Programming
 ![OOP design](./images/oop.png)
 
 ![Abstraction](./images/classDefine.png)
@@ -93,15 +116,22 @@
     - [Practice]: look around, find anything catch your eye, create a class of it
 * inheritence.py; empty subclass
 * student2.py; class Student(Person)
+* person1.py; class Person:
+* person2.py; class Employee(Person)
 * intervace
     - interface1.py; implementation class with no abstract function defined
     - interface2.py; Compare student by interface Comparable
     - super class (person.py)
     - sub class (employee, manager)
+* polymorphism.py (person1.py, student2.py, teacher.py)
+* encapsulation.py (private variable: __ssn) project ssn to be accessed directly
+
+    You need getter/setter to access them.
+* student3.py; load student from csv file
+
 ---
 [Table of Contents](#Table-of-Contents)
 
-    
 ## Functional Programming
 ./function
 * variableArgs.py; variable arguments
@@ -144,8 +174,6 @@
 >>> import logging
 >>> help(logging)
 ```
-
-
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -156,6 +184,12 @@
 ```py
     if type(r) not in [int, float]:
         raise TypeError(f"The radius must be a real number, r={r}")
+```
+```py
+def addOver5(x, y):
+    if x<5 or y<5:
+        raise Exception('both x and y should > 5')
+    return x + y
 ```
 * circle2.py
 * catch Error
@@ -212,7 +246,6 @@ raise Exception
 ```
 do different test, show program terminated in the middle
     - try-except/circleTest.py
- 
 
 ---
 [Table of Contents](#Table-of-Contents)
@@ -236,14 +269,20 @@ do different test, show program terminated in the middle
 
 ## Lambda Expression
 ![Lambda Function](./images/lambda.png)
+    - >>> dir(__builtins__) > map, filter, reduce (no loop)
+    - >>> help(map) > map(function, iterable, ...)
+    - >>> help(filter)
 
 ./lambda/...
 * func.py; pass function to function
 * lambda.py; 
 * lambda1.py;
+* map0.py; two variables lambda function
 
 ![map()](./images/map.png)
-* map0.py; two variables lambda function
+
+    - map(function, iterable, ...)
+
 * map1.py; convert city temperatures
 * map2.py; define the lambda function outside
 * map3.py; two variables lambda action on two list
@@ -277,7 +316,6 @@ do different test, show program terminated in the middle
 * airlineseat.py; 
 ---
 [Table of Contents](#Table-of-Contents)
-
 
 ## monad
 * circle1.py; calculate circle area without type checking. __doc__()
@@ -351,7 +389,9 @@ foo
 [Table of Contents](#Table-of-Contents)
 
 ## Blackjack Card Game
+
 ![BlackJack](./images/blackjack.png)
+
     - card.py > class Card (__init__(), __repr__())
     - class Card:
     - class BlackJackCard:
@@ -461,9 +501,6 @@ File: DB.Browser.for.SQLite-3.12.1-win64-v2.msi
 
 * sqlite7.py > build relational data
 * sqlite8.py > show relation between project and task
-
-![projects - tasks](images/projects-tasks.png)
-
 * review bookdb.py
 * sqlite9.py > create books table
 * sqlite10.py > insert data into books table
@@ -485,7 +522,6 @@ python app.py
 cd ../book-app
 npm start
 ```
-
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -506,13 +542,6 @@ npm start
 * Review
     - Handle Exception try-except 
     [Practice]: indexOutBound.py
-```py
-def addOver5(x, y):
-    if x<5 or y<5:
-        raise Exception('both x and y should > 5')
-    return x + y
-```
-    - assert
 
     ![Try-except](./images/try-except.webp)
     [Practice]: indexOutBound.py
@@ -533,17 +562,6 @@ def addOver5(x, y):
 [website](https://scikit-learn.org)
 * machine learning
     - sklearn
-
-* lambda expression
-    - defineFunction.py
-    - func.py
-    - lambda.py (anonymous function)
-    ![lambda arguments:expression](./images/lambda.png)
-    - >>> dir(__builtins__) > map, filter, reduce (no loop)
-    - >>> help(map) > map(function, iterable, ...)
-    - >>> help(filter)
-    - ![map](./images/map.png)
-    - map(function, iterable, ...)
 ---
 老生
 总校
