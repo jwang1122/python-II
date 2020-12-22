@@ -13,6 +13,7 @@
 1. [Command Line Arguments](#Command-Line-Arguments)
 1. [Sqlite](#Sqlite)
 1. [OOP programming](#OOP-programming)
+1. [Type Sensitive](#Type-Sensitive)
 1. [Try Except](#Try-Except)
 1. [Unit Test](#Unit-Test)
 1. [enum](#enum)
@@ -123,11 +124,35 @@ git branch
     - interface2.py; Compare student by interface Comparable
     - super class (person.py)
     - sub class (employee, manager)
+* abstract class
+    - abstractClass1.py; @abc.abstractmethod
+    - abstractClass2.py; no implementation area() function
+    - abstractClass3.py; @Shape.register useless
+    - abstractClass4.py; check type, polymorphism
+
 * polymorphism.py (person1.py, student2.py, teacher.py)
 * encapsulation.py (private variable: __ssn) project ssn to be accessed directly
 
     You need getter/setter to access them.
 * student3.py; load student from csv file
+
+---
+[Table of Contents](#Table-of-Contents)
+
+## Type Sensitive
+./typing
+```
+pip install mypy
+```
+* circle.py
+* circleTest.py
+* typing1.py
+* typing2.py
+* typing3.py
+* typing4.py
+* typing5.py
+
+[Typing Read Me](TypingReadMe.md)
 
 ---
 [Table of Contents](#Table-of-Contents)
@@ -534,7 +559,7 @@ npm start
 1. [Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
 1. [Reactive X](https://blog.oakbits.com/introduction-to-rxpy.html)
 1. [Sqlite Tutorial](https://docs.python.org/3/library/sqlite3.html)
-
+1. [Python typing](https://www.journaldev.com/34519/python-typing-module)
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 ---
 [Table of Contents](#Table-of-Contents)
