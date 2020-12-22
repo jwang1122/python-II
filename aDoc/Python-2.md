@@ -456,16 +456,27 @@ foo
 [Table of Contents](#Table-of-Contents)
 
 ## Blackjack Card Game
+[How to Play Blackjack](https://www.blackjackapprenticeship.com/how-to-play-blackjack/#playerdecideshowtoplayhand)
 
-![BlackJack](./images/blackjack.png)
+![BlackJack](./images/BlackjackGame.jpg)
+
+![BlackJack Card Values](./images/Blackjack-values.png)
+
+![Black Jack Class Diagram](./images/BlackJackCardGame.png)
+
 ./Blackjack
+* turtle7.py; draw card on frame
 * card1.py; use string and int for face, causes issue that bad card can be generated
 * card1Test.py;
 * card2.py; use enum for both face and suit
 * card2Test.py;
 * Test Driven Development
     - test_Card2Test.py (==, <, >,)
+
+![Card and BlackJackCard](./images/BlackJackCard1.png)
+
 * blackJackCard.py
+
 * deck.py
 * player.py
 * dealer.py
@@ -630,7 +641,6 @@ npm start
     - logging
     [Practice]: write logging to card game
     - card.py
-    ![Black Jack Class Diagram](./images/BlackJackCardGame.png)
     [Practice]: create a super class and sub class
     - Functional programing
     [Practice]: pass function, return function
