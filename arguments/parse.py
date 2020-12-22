@@ -22,7 +22,7 @@ def main(argv):
 if __name__ == "__main__":
    main(sys.argv[1:])
 """
-python level2/arguments/parse.py -h
-python level2/arguments/parse.py -i BMP -o
-python level2/arguments/parse.py -i inputfile -o mylog.log
+python arguments/parse.py -h
+python arguments/parse.py -i BMP -o
+python arguments/parse.py -i inputfile -o mylog.log
 """

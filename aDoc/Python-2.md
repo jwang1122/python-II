@@ -8,6 +8,8 @@
 5. Source Version Control ([Git](#Git))
 
 ## Table of Contents
+1. [assert](#assert)
+1. [Command Line Arguments](#Command-Line-Arguments)
 1. [Sqlite](#Sqlite)
 1. [OOP programming](#OOP-programming)
 1. [Try Except](#Try-Except)
@@ -26,6 +28,26 @@
 1. [](#)
 1. [References](#References)
 
+## assert
+![Python Keywords](./images/python-keywords.png)
+    - [Practice]: write program using keywords we have learned.
+* assert0.py
+* assert1.py
+* assert2.py
+---
+[Table of Contents](#Table-of-Contents)
+
+## Command Line Arguments
+./arguments
+* arguments1.py; return list of commandline arguments
+* arguments2.py; get one commandline argument
+* parse.py; parse commandline arguments
+    - get commandline arguments
+    - define commandline arguments in __init__.py
+---
+[Table of Contents](#Table-of-Contents)
+
+
 ## Python Document
 * use python help
 * create my own document
@@ -33,6 +55,9 @@
 * doc1.py; use """
 * circle1.py; use __doc__
 * simpleMath.py; document functions
+---
+[Table of Contents](#Table-of-Contents)
+
 
 ## enum
 * enum1.py; Color extends from Enum, value, type...
@@ -86,6 +111,8 @@
 * func2.py; inner function: define function in function
 * func3.py; return function from function conditionally
 * func4.py; use parameter generate different math function
+    - [Practice]: define average function (assert1.py)
+
 * func5.py; use one function to do sample math
 * funcAttribute.py; getattr()
 * funcEither.py; Left/Right with logging
@@ -125,16 +152,47 @@
 
 ## Try Except
 * circle1.py
+* raise Error
+```py
+    if type(r) not in [int, float]:
+        raise TypeError(f"The radius must be a real number, r={r}")
+```
 * circle2.py
+* catch Error
+```py
+try:
+    area = circle_area(4)
+    print("12:",area)
+    area = circle_area(4.3)
+    print("14:",area)
+except Exception as error:
+    print("12:",error)
+```
 * circle3.py
     - python > dir(__builtins__) > TypeError > ValueError
-
 * circleTest1.py
 * circleTest2.py
 * finally.py;
 * math1.py
 * try-expectTest1.py; every function add try-expect
 * try-expectTest2.py; one function 
+* assert error
+./myassert
+    - assert0.py
+```py
+def div(x,y):
+    """
+    if the condition is not meet, program stop running
+    """
+    assert y!=0, "divisor cannot be 0."
+    return x/y
+try:
+    z = div(10,0)
+except AssertionError as ae:
+    print("Error: ", ae)
+```
+    - assert1.py; assert empty list
+    - assert2.py; circle_area assert
 * raise Exception
     - circle.py
 ```py
@@ -310,6 +368,10 @@ foo
     - def playGame():
     - class Dealer(Player): __init__(), shuffle(), hit(), showHand()
     - unittest test_dealer.py
+    - class Deck: > __init__(), nextCard(), shuffle()
+    - unittest test_deck.py
+    - class Player: > __init__(), __repr__(), addCardToHand(), cleanHand(), getHandValue(), getHandSize(), hit()
+    - unittest test_player.py
 
 * Keep in mind, always test your code with small unit.
     - CardTestOne.py
@@ -340,6 +402,10 @@ without if-else
 * ./cardGame/card4.py; with decision table to get rid of if-else
 * tableBuilder.py; build cardDecision.py to determin who is winner
 * test the result
+    - class Game
+    - get rid of if-else
+    - decision table
+
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -468,53 +534,6 @@ def addOver5(x, y):
 * machine learning
     - sklearn
 
-* Reactive X > RePY mo
-    - observer0.py
-    - observer1.py
-    - observer2.py
-    - observer3.py
-    - observer4.py
-    - observer5.py
-
-
-* design pattern
-    - observer
-    - command
-    - strategy
-
- 
-## Functional Programming (Continue)
-* area.py
-* area1.py
-* area2.py(areaTable.py)
-* monad
-    - either
-    either0.py~~
-
-    ![Reactive Action](./images/ReactiveAction.gif)
-        
-        * either1.py
-        * either2.py
-    - monad.py (understand Just() box)
---
-## 2020-07-27 
-* command line arguments
-    - get commandline arguments
-    - define commandline arguments in __init__.py
-    - map0.py, map1.py, map2.py, map3.py
-    - filter0.py, filter1.py
-    - reduce.py (functools.reduce())
-    - sort1.py (sorted())
-    - sort2.py (list.sort())
-    - zip1.py
-    - either
-        * either0.py
-        * either1.py
-        * either2.py
-    - monad.py (understand Just() box)
-    - writePythonMonad.py
----
-## 2020-07-23
 * lambda expression
     - defineFunction.py
     - func.py
@@ -526,89 +545,6 @@ def addOver5(x, y):
     - ![map](./images/map.png)
     - map(function, iterable, ...)
 ---
-## 2020-07-22
-* switch
-    - variableArgs.py
-* pass function to a function as argument
-    - func1.py
-* return a function from a function
-    - func2.py
-* timer decorator
-    - uderstand pass/return function function/func1.py
-    - my_timer1.py understand wrapper function
-    - my_timer2.py
-
----
-## 2020-07-21
-* switch
-    - switch.py
-    - function as dict value (switcher.py)
-* Card Game Continue
-    - card3.py
-
----
-## 2020-07-20
-* Card game continue
-    - class Game
-    - get rid of if-else
-    - decision table
-
----
-## 2020-07-16
-* Black Jack Card (Continue)
-    - check error on Grace machine
-    - card.py > playGame()
-    - Optimize the code > class Game:
-    - Game.check4win()
-    - [Homework]: write unit test for check4Win() and dealCards()
-    - homework > modify code support multi player
-    - [Practice]: add bit to players
-
-* assert
-![Python Keywords](./images/python-keywords.png)
-    - [Practice]: write program using keywords we have learned.
-    - assert0.py
-    - assert1.py
-    - assert2.py
-
-* passing function instead of variable 
-    - [Practice]: define average function (assert1.py)
-    - func0.py
-    - func.py
-    - func1.py
-
-* return function instead of variable
-    - func2.py
----
-## 2020-07-15
-* Black Jack Card Game(continue)
-
----
-## 2020-07-13
-![BlackJack](./images/BlackJackCardGame.png)
-    - class Deck: > __init__(), nextCard(), shuffle()
-    - unittest test_deck.py
-    - class Player: > __init__(), __repr__(), addCardToHand(), cleanHand(), getHandValue(), getHandSize(), hit()
-    - unittest test_player.py
-
----
-# 2020-07-09
-![BlackJack](./images/blackjack.png)
-    - card.py > class Card (__init__(), __repr__())
-    - class Card:
-    - class BlackJackCard:
-    - unittest test_card.py
-
----
-# 2020-07-08
-* Unit test
-    - [Practice]: crete unit test for simple math add, sub, mul, div (tuple + int, tuple + tuple, list + list)
-
-* Logging
-    - logging1.py
-    - [Practice]: add logging in simple math add, sub, mul, div
-
-
 老生
 总校
 * Daniel Duan（段以理）
