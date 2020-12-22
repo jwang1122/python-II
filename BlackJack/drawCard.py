@@ -40,7 +40,6 @@ pen.hideturtle()
 def btnclick(x, y):
     if x > 0 and x < 81 and y > 0 and y < 31:
         print("Hi, the button is clicked.")
-        clearstamps()
 
 
 onscreenclick(btnclick, 1)
