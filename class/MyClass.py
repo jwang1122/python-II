@@ -3,7 +3,8 @@ class MyClass:
 	def function(self):        
 		print("This is a message inside the class.")
 
-myobject = MyClass()
+if __name__ == '__main__':
+	myobject = MyClass()
 
-print(myobject.variable)
-myobject.function()
+	print(myobject.variable)
+	myobject.function()

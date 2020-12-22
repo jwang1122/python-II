@@ -1,19 +1,42 @@
 from circle1 import circle_area
 
-def printCircleArea(r):
-    try:
-        area = circle_area(r)
-        print("The circle area with radius=%5.2f is area=%5.2f" %(r,area))
-    except Exception as err:
-        print("Error: ", err)
+r = 1
+try:
+    area = circle_area(r)
+    print("06:",area)
+except Exception as err:
+    print("08: Error-", err)
 
-if __name__ == '__main__':
-    printCircleArea(1)
-    printCircleArea(2.3)
-    printCircleArea(-2)
-    printCircleArea(-2+3j)
-    printCircleArea("Hello")
-    printCircleArea(None)
+r=2.3
+try:
+    area = circle_area(r)
+    print("13:",area)
+except Exception as err:
+    print("15: Error-",err)
 
-    print("Done.")
+try:
+    area = circle_area(-2)
+    print("19:",area)
+except Exception as err:
+    print('21: error: {0}'.format(err))
 
+try:
+    area = circle_area(-2+3j)   
+    print("25:",area)
+except TypeError as err:
+    print("27: error: {0}".format(err))
+
+
+try:
+    area = circle_area('hello')
+    print("32:",area)
+except TypeError as err:
+    print("34: error: {0}".format(err))
+
+try:
+    area = circle_area(None) 
+    print("38:",area)
+except TypeError as err:
+    print("40: error: {0}".format(err))
+
+print("Done.")

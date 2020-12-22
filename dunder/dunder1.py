@@ -1,8 +1,8 @@
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 
-x = list2 + list1  # __add__
-print("05:", x)  # outut: 6 elements
+x = list2 + list1  # operator + related to __add__()
+print("05:", x)  # output: 6 elements
 
 print("07:", 8 in list1)  # __contains__ output: False
 print("08:", len(list1))  # __len__ output: 7

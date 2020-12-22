@@ -45,9 +45,9 @@ class EmlParserNew(FormalParserInterface):
 if __name__ == '__main__':
     try:
         pdf_parser = PdfParserNew()
-        print(pdf_parser)
+        print("48:",pdf_parser)
         eml_parser = EmlParserNew()
-        print(eml_parser)
+        print("50:",eml_parser)
     except Exception as err:
         print(err)
     print("Done.")

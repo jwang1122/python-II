@@ -2,26 +2,37 @@
 
 ## Python 编写应用软件的几大要素
 1. logging ([Java Logging](#Logging))
-2. Unit test ([Unit Test](#JUnittest))
-3. Document ([Java Doc](#Java-Doc))
+2. Unit test ([Unit Test](#Unit-Test))
+3. Document ([Python Document](#Python-Document))
 4. Database Access ([Sqlite](#Sqlite))
 5. Source Version Control ([Git](#Git))
 
 ## Table of Contents
 1. [Sqlite](#Sqlite)
+1. [OOP programming](#OOP-programming)
+1. [Try Except](#Try-Except)
+1. [Unit Test](#Unit-Test)
 1. [enum](#enum)
+1. [Blackjack Card Game](#Blackjack-Card-Game)
 1. [Functional Programming](#Functional-Programming)
+1. [Logging](#Logging)
 1. [Lambda Expression](#Lambda-Expression)
-1. [Rx Observer](#Observer)
+1. [Rx Observer](#Rx-Observer)
 1. [either](#either)
 1. [monad](#monad)
-1. [Blackjack Card Game](#Blackjack-Card-Game)
-1. [Design Pattern](#Design_Pattern)
+1. [Design Pattern](#Design-Pattern)
 1. [Understand Dunder Functions](#Understand-Dunder-Functions)
 1. [](#)
 1. [](#)
-1. [](#)
 1. [References](#References)
+
+## Python Document
+* use python help
+* create my own document
+./aDoc
+* doc1.py; use """
+* circle1.py; use __doc__
+* simpleMath.py; document functions
 
 ## enum
 * enum1.py; Color extends from Enum, value, type...
@@ -44,6 +55,28 @@
 ---
 [Table of Contents](#Table-of-Contents)
 
+## OOP programming
+![OOP design](./images/oop.png)
+
+![Abstraction](./images/classDefine.png)
+
+./class
+* MyClass.py; class with variable and function
+* addNewMethod.py; add method to existing class
+* [Practice]: student.py
+    - load csv, build student objects
+    - [Practice]: look around, find anything catch your eye, create a class of it
+* inheritence.py; empty subclass
+* student2.py; class Student(Person)
+* intervace
+    - interface1.py; implementation class with no abstract function defined
+    - interface2.py; Compare student by interface Comparable
+    - super class (person.py)
+    - sub class (employee, manager)
+---
+[Table of Contents](#Table-of-Contents)
+
+    
 ## Functional Programming
 ./function
 * variableArgs.py; variable arguments
@@ -64,8 +97,81 @@
 * defineFunction.py;
 * entry_exit1.py; @entry_exit
 * entry_exit2.py; @entry_exit __init__() __call__()
+./timerDecorator
+* my_timer.py
+* my_timer1.py
+* my_timer2.py;
+* my_timer3.py;
+* timerDecorator.py;
 * switch.py; use Month as dict
 * switcher.py; store function in dict
+---
+[Table of Contents](#Table-of-Contents)
+
+## Logging
+./loggin
+
+* logging1.py
+    - [Practice]: add logging in simple math add, sub, mul, div
+```py
+>>> import logging
+>>> help(logging)
+```
+
+
+---
+[Table of Contents](#Table-of-Contents)
+
+
+## Try Except
+* circle1.py
+* circle2.py
+* circle3.py
+    - python > dir(__builtins__) > TypeError > ValueError
+
+* circleTest1.py
+* circleTest2.py
+* finally.py;
+* math1.py
+* try-expectTest1.py; every function add try-expect
+* try-expectTest2.py; one function 
+* raise Exception
+    - circle.py
+```py
+from math import pi
+
+def circle_area(r):
+    return pi * (r**2)
+```
+test code with -2, 3+4j, "hello"
+raise Exception
+    - circle1.py
+```py
+    if type(r) not in [int, float]:
+        raise TypeError("The radius must be a real number.")
+    if r < 0:
+        raise ValueError("The radius cannot be negative.") 
+```
+do different test, show program terminated in the middle
+    - try-except/circleTest.py
+ 
+
+---
+[Table of Contents](#Table-of-Contents)
+
+
+## Unit Test
+* Configure VS Code Unit Test
+    Right-Click > Command Pallete.. > Phthon: Configure Tests > unittest > Root director > test_*.py
+* test_Math.py
+    - [Practice]: crete unit test for simple math add, sub, mul, div (tuple + int, tuple + tuple, list + list)
+* test_card.py
+* test_circleArea.py
+* test_dealer.py
+* test_deck.py
+* test_math1.py
+* test_player.py
+
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -102,6 +208,9 @@
 * zip3.py; 
 * ./lambda/shoppingMonad1.py (use list bind functions)
 * ./lambda/writePythonMonad.py (use monad bind functions)
+---
+[Table of Contents](#Table-of-Contents)
+
 
 ## either
 * either1.py; isEven() function return Either Right or Left
@@ -184,6 +293,24 @@ foo
 [Table of Contents](#Table-of-Contents)
 
 ## Blackjack Card Game
+![BlackJack](./images/blackjack.png)
+    - card.py > class Card (__init__(), __repr__())
+    - class Card:
+    - class BlackJackCard:
+    - unittest test_card.py
+    - check error on Grace machine
+    - card.py > playGame()
+    - Optimize the code > class Game:
+    - Game.check4win()
+    - [Homework]: write unit test for check4Win() and dealCards()
+    - homework > modify code support multi player
+    - [Practice]: add bit to players
+    - Dealer > deal(), showHand()
+    - DealerTest.py
+    - def playGame():
+    - class Dealer(Player): __init__(), shuffle(), hit(), showHand()
+    - unittest test_dealer.py
+
 * Keep in mind, always test your code with small unit.
     - CardTestOne.py
     - DealerTest.py
@@ -233,10 +360,14 @@ without if-else
 [Table of Contents](#Table-of-Contents)
 
 ## Understand Dunder Functions
-* dunder1.py
-* limitUser.py
-* range1.py
-*
+* dunder1.py; __len__, __gt__, __eq__, __contains__, __add__
+* dunder2.py; implement __call__(), make class callable
+* classDecorator.py; 
+* limitUser.py; (using user.py) __name__()
+* range1.py; __next__, __iter__ [homework](write your own xrange which return real number)
+* sort1.py; __lt__(), __eq__()
+* sort2.py; __lt__() only
+* user.py; __name__
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -273,6 +404,22 @@ File: DB.Browser.for.SQLite-3.12.1-win64-v2.msi
 * sqlitebookdb.py > build CRUD
 * app5.py > use sqlitebookdb.py to provide service
     use Postman to check the service.
+* CRUD huaxia book
+```
+cd workspace
+git clone https://github.com/eagleboatblue/reactjs.git
+cd reactjs
+cd book-app
+npm install
+cd ../server
+python -m venv env
+.\env\Scripts\activate.bat
+mongod
+python app.py
+cd ../book-app
+npm start
+```
+
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -435,13 +582,6 @@ def addOver5(x, y):
 ---
 ## 2020-07-15
 * Black Jack Card Game(continue)
-    - Dealer > deal(), showHand()
-    - DealerTest.py
-    - def playGame():
----
-## 2020-07-14
-    - class Dealer(Player): __init__(), shuffle(), hit(), showHand()
-    - unittest test_dealer.py
 
 ---
 ## 2020-07-13
@@ -467,84 +607,6 @@ def addOver5(x, y):
 * Logging
     - logging1.py
     - [Practice]: add logging in simple math add, sub, mul, div
-
-* OOP programing concept
-    - ![OOP design](./images/oop.png)
-
-    - ![Abstraction](./images/classDefine.png)
-    - [Practice]: student.py
-    - load csv, build student objects
-    - [Practice]: look around, find anything catch your eye, create a class of it
-
-* Inheritence
-    - super class (person.py)
-    - sub class (employee, manager)
-    
-## 2020-07-07
-
-* try-except function
-    - python > dir(__builtins__) > TypeError > ValueError
-    - try-exceptTest2.py
-    - [Practice]: implement math function add, sub, mul, div
-
-* Unit test
-    - Command Pallete > Python: Configure Tests > unittest > . Root directory > test_*.py
-    - Command Pallete > Python: Discover Tests 
-    - test_circleArea.py
-    - [Practice]: crete unit test for simple math add, sub, mul, div (tuple + int, tuple + tuple, list + list)
-
-* Logging
-    - logging1.py
-    - [Practice]: add logging in simple math add, sub, mul, div
-
-```py
->>> import logging
->>> help(logging)
-```
-
-## 2020-07-06
-* CRUD huaxia book
-```
-cd workspace
-git clone https://github.com/eagleboatblue/reactjs.git
-cd reactjs
-cd book-app
-npm install
-cd ../server
-python -m venv env
-.\env\Scripts\activate.bat
-mongod
-python app.py
-cd ../book-app
-npm start
-```
-
-* raise Exception
-    - circle.py
-```py
-from math import pi
-
-def circle_area(r):
-    return pi * (r**2)
-```
-test code with -2, 3+4j, "hello"
-raise Exception
-    - circle1.py
-```py
-    if type(r) not in [int, float]:
-        raise TypeError("The radius must be a real number.")
-    if r < 0:
-        raise ValueError("The radius cannot be negative.") 
-```
-do different test, show program terminated in the middle
-    - try-except/circleTest.py
-
-* try-except Block
-    - try-exceptTest.py
-    - circleTest2.py
-    - try-catchTest.py (add try-except block, make code non-stop)
-    - try-catchTest1.py (optimize code)
- 
 
 
 老生

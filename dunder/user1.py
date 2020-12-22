@@ -2,10 +2,10 @@
 understand __name__
 """
 class User:
-    def __init__(self, name, id, cando):
+    def __init__(self, name, id):
         self.name = name
         self.id = id
-        self.cando = cando
+        self.cando = []
 
     def __repr__(self):
         return self.name
@@ -24,3 +24,14 @@ class User:
     def setCanDo(self, cando):
         self.cando.append(cando)
 
+def playPiano():
+    print("playing piano...")
+
+def writePython():
+    print("coding python...")
+
+if __name__ == '__main__':
+    user1 = User("John", 1111)
+    user1.setCanDo(playPiano.__name__)
+    user1.do(playPiano)
+    user1.do(writePython)

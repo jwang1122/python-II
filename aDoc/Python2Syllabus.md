@@ -23,6 +23,10 @@
     - decorator function
     - function chain
 
+1. Try-Except
+
+1. Lambda Expression
+
 1. Either
     - Reactive X Concept
     - Function chain by Either
@@ -43,6 +47,7 @@
     - Observer
     - Factory
     - Command
+    - Decorator
 
 1. Understand Dunder Functions and variables
     - \_\_name__

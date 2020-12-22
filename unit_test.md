@@ -5,14 +5,14 @@
 1. unittest Standard Python test framework
 1. .Root Directory
 1. test_*.py
-1. on left tool bar, click Test icon
+1. on left tool bar, click Flask Test icon
 
-![Configure Test](./doc/images/unittest2.png)
+![Configure Test](./aDoc/images/unittest2.png)
 
-![Choose test tool](./doc/images/unittest3.png)
+![Choose test tool](./aDoc/images/unittest3.png)
 
-![Select test file folder](./doc/images/unittest4.png)
+![Select test file folder](./aDoc/images/unittest4.png)
 
-![Select test file name format](./doc/images/unittest5.png)
+![Select test file name format](./aDoc/images/unittest5.png)
 
-![Unitest](./doc/images/unittest1.png)
+![Unitest](./aDoc/images/unittest1.png)

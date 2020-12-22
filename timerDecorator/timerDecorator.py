@@ -15,4 +15,5 @@ def display_info(name, age):
     time.sleep(2) # simulate long process function
     print(f"display_info() run with arguments: ({name}, {age})")
 
-display_info("John", 23)
+if __name__ == '__main__':
+    display_info("John", 23)
