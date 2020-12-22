@@ -62,6 +62,11 @@ git branch
 [Table of Contents](#Table-of-Contents)
 
 ## Command Line Arguments
+### What is __init__.py used for?
+>The primary use of __init__.py is to initialize Python packages. The easiest way to demonstrate this is to take a look at the structure of a standard Python module.
+
+>__init__.py can be an empty file but it is often used to perform setup needed for the package(import things, load things into path, etc).
+
 ./arguments
 * arguments1.py; return list of commandline arguments
 * arguments2.py; get one commandline argument
@@ -204,6 +209,8 @@ pip install mypy
 
 
 ## Try Except
+    
+![Try-except](./images/try-except.webp)
 * circle1.py
 * raise Error
 ```py
@@ -237,7 +244,12 @@ except Exception as error:
 * try-expectTest2.py; one function 
 * assert error
 ./myassert
-    - assert0.py
+* assert0.py
+* assert1.py
+* assert2.py
+* indexOutOfRange.py
+
+---
 ```py
 def div(x,y):
     """
@@ -287,7 +299,7 @@ do different test, show program terminated in the middle
 * test_deck.py
 * test_math1.py
 * test_player.py
-
+* test_card5.py
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -416,6 +428,8 @@ foo
 ## Blackjack Card Game
 
 ![BlackJack](./images/blackjack.png)
+* card.py;
+* test_card5.py; unit test to test card5.py
 
     - card.py > class Card (__init__(), __repr__())
     - class Card:
