@@ -1,7 +1,4 @@
 class Card:
-    faces = ("ZERO", "ACE", "TWO", "THREE","FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "JACK","QUEEN", "KING")
-    suits = ('DIAMONDS', "CLUBS", "SPADES", "HEARTS")
-
     # constructor
     def __init__(self, face, suit):
         # instance variables    
@@ -17,14 +14,6 @@ class Card:
 
     def __eq__(self, other):
         return self.face == other.face
-
-class BlackJackCard(Card):
-    def getValue(self):
-        if(self.face == 1):
-            return 11
-        elif(self.face > 9):
-            return 10
-        return self.face
 
 if __name__ == '__main__':
     c1 = Card(4, "DIAMONDS")

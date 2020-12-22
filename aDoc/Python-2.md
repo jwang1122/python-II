@@ -1,5 +1,26 @@
 # 华夏中文学校 Python level-II
+**Learn From Mistakes**
+* My own mistakes
+    - avoid mistakes made before
 
+    ![Learn from your own Mistake](./images/MistakesMine.jpeg)
+
+    - make mistake and learn
+
+    ![Make Mistake and Learn](./images/makeMistakesAndLearn.jpg)
+
+* Other's mistake
+
+    ![Learn from other's Mistake](./images/MistakesHis.jpeg)
+
+* Pay attention to error message, especially last line
+
+```
+Traceback (most recent call last):
+  File "c:\Users\12818\workspace\python-II\cardGame\card5.py", line 82, in <module>
+    club2 = Card(Faces.TWO, Suits.CLUBS)
+TypeError: Can't instantiate abstract class Card with abstract method getValue
+```
 ## Python 编写应用软件的几大要素
 1. logging ([Java Logging](#Logging))
 2. Unit test ([Unit Test](#Unit-Test))
@@ -11,6 +32,8 @@
 1. [Git](#Git)
 1. [assert](#assert)
 1. [Command Line Arguments](#Command-Line-Arguments)
+1. [Python Document](#Python-Document)
+1. [Understand Dunder Functions](#Understand-Dunder-Functions)
 1. [Sqlite](#Sqlite)
 1. [OOP programming](#OOP-programming)
 1. [Type Sensitive](#Type-Sensitive)
@@ -25,9 +48,6 @@
 1. [either](#either)
 1. [monad](#monad)
 1. [Design Pattern](#Design-Pattern)
-1. [Understand Dunder Functions](#Understand-Dunder-Functions)
-1. [](#)
-1. [](#)
 1. [References](#References)
 
 ## Git
@@ -84,6 +104,17 @@ git branch
 * doc1.py; use """
 * circle1.py; use __doc__
 * simpleMath.py; document functions
+* help()
+    _ dir()
+    - dir(__spec__)  
+    - dir(__builtins__)
+* Write Markdown 
+    - display link (website, Table of Content, other md file)
+    - Greenshot (Greenshot-INSTALLER-1.2.10.6-RELEASE.exe)
+    - display image
+    - command line (command block)
+    - Python source code block
+    - bullet point
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -114,16 +145,16 @@ git branch
 
 ![Abstraction](./images/classDefine.png)
 
-./class
+./pythonClass
 * MyClass.py; class with variable and function
 * addNewMethod.py; add method to existing class
-* [Practice]: student.py
-    - load csv, build student objects
+* student1.py; Simple class with __init__, __repr__, and increaseGrade()
     - [Practice]: look around, find anything catch your eye, create a class of it
 * inheritence.py; empty subclass
-* student2.py; class Student(Person)
 * person1.py; class Person:
+* student2.py; class Student(Person) using person1.py
 * person2.py; class Employee(Person)
+* student3.py; load csv file, build student objects
 * intervace
     - interface1.py; implementation class with no abstract function defined
     - interface2.py; Compare student by interface Comparable
@@ -139,7 +170,6 @@ git branch
 * encapsulation.py (private variable: __ssn) project ssn to be accessed directly
 
     You need getter/setter to access them.
-* student3.py; load student from csv file
 
 ---
 [Table of Contents](#Table-of-Contents)
@@ -428,7 +458,19 @@ foo
 ## Blackjack Card Game
 
 ![BlackJack](./images/blackjack.png)
-* card.py;
+./Blackjack
+* card1.py; use string and int for face, causes issue that bad card can be generated
+* card1Test.py;
+* card2.py; use enum for both face and suit
+* card2Test.py;
+* Test Driven Development
+    - test_Card2Test.py (==, <, >,)
+* blackJackCard.py
+* deck.py
+* player.py
+* dealer.py
+    [Practice]: test_dealer() -> test_hit()
+
 * test_card5.py; unit test to test card5.py
 
     - card.py > class Card (__init__(), __repr__())
@@ -505,14 +547,17 @@ without if-else
 [Table of Contents](#Table-of-Contents)
 
 ## Understand Dunder Functions
-* dunder1.py; __len__, __gt__, __eq__, __contains__, __add__
-* dunder2.py; implement __call__(), make class callable
+* dunder1.py; \_\_len__, \_\_gt__, \_\_eq__, \_\_contains__, \_\_add__
+* dunder2.py; implement \_\_call__(), make class callable
 * classDecorator.py; 
-* limitUser.py; (using user.py) __name__()
-* range1.py; __next__, __iter__ [homework](write your own xrange which return real number)
-* sort1.py; __lt__(), __eq__()
-* sort2.py; __lt__() only
-* user.py; __name__
+* limitUser.py; (using user.py) \_\_name__()
+* range1.py; \_\_next__, \_\_iter__ 
+
+    [**homework**](write your own xrange which return real number)
+* sort1.py; \_\_lt__(), \_\_eq__()
+* sort2.py; \_\_lt__() only
+* user.py; \_\_name__
+* person1.py; \_\_subclasshook__
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -574,16 +619,12 @@ npm start
 1. [Reactive X](https://blog.oakbits.com/introduction-to-rxpy.html)
 1. [Sqlite Tutorial](https://docs.python.org/3/library/sqlite3.html)
 1. [Python typing](https://www.journaldev.com/34519/python-typing-module)
+1. [__init__](https://mikegrouchy.com/blog/be-pythonic-__init__py)
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 ---
 [Table of Contents](#Table-of-Contents)
 
 * Review
-    - Handle Exception try-except 
-    [Practice]: indexOutBound.py
-
-    ![Try-except](./images/try-except.webp)
-    [Practice]: indexOutBound.py
     - Write unit test
     [Practice]: test_dealer() -> test_hit()
     - logging

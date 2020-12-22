@@ -1,3 +1,7 @@
+"""
+Good thing: the face value is exactly the same showing on the card
+Bad thing: People can use any string to generate a Card instance
+"""
 class Card:
     FACES = ("A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K")
     SUITS = ('Diamonds', "Clubs", "Spades", "Hearts")

@@ -11,7 +11,9 @@ class Student:
     def increaseGrade(self):
         self.grade = self.grade + 1
 
-s1=Student("John", 10, 13)
-print("15:",s1)
-s1.increaseGrade()
-print("17:",s1)
+if __name__ == "__main__":
+
+    s1=Student("John", 10, 13)
+    print("15:",s1)
+    s1.increaseGrade()
+    print("17:",s1)

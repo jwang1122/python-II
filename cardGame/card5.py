@@ -79,4 +79,4 @@ if __name__ == "__main__":
     print(diamondA)
     print(diamondA)
 
-#    club2 = Card(Faces.TWO, Suits.CLUBS)
+    club2 = Card(Faces.TWO, Suits.CLUBS)

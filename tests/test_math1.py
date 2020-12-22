@@ -1,5 +1,5 @@
 import unittest
-from assertFolder.math1 import *
+from myassert.math1 import *
 
 class TestMath1(unittest.TestCase):
     def test_add(self):
