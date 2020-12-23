@@ -8,7 +8,8 @@
     - make mistake and learn
 
     ![Make Mistake and Learn](./images/makeMistakesAndLearn.jpg)
-
+    
+    - myassert/indexOutOfBound.py 
 * Other's mistake
 
     ![Learn from other's Mistake](./images/MistakesHis.jpeg)
@@ -70,6 +71,10 @@ git pull
 git clone https://github.com/jwang1122/python2.git
 git log --oneline
 git branch
+git branch <new brance name>
+git checkout <branch name>
+
+
 ```
 ---
 [Table of Contents](#Table-of-Contents)
@@ -81,6 +86,7 @@ git branch
 * assert0.py
 * assert1.py
 * assert2.py
+* asyncTest.py
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -472,7 +478,7 @@ foo
 * card1.py; use string and int for face, causes issue that bad card can be generated
 * card1Test.py;
 * card2.py; use enum for both face and suit
-* card2Test.py;
+* card2Test.py; leave it not passed
 * Test Driven Development
     - test_Card2Test.py (==, <, >,)
 
@@ -634,6 +640,7 @@ npm start
 1. [Sqlite Tutorial](https://docs.python.org/3/library/sqlite3.html)
 1. [Python typing](https://www.journaldev.com/34519/python-typing-module)
 1. [__init__](https://mikegrouchy.com/blog/be-pythonic-__init__py)
+1. [async task](https://docs.python.org/3/library/asyncio-task.html)
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 ---
 [Table of Contents](#Table-of-Contents)
