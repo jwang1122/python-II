@@ -1,3 +1,11 @@
+"""
+Make class Product callable by def __call__.
+"""
+__version__ = '3.0.0'
+__author__ = "John Q. Wang"
+__mydunder__ = "Just a test"
+nothing = 'Nothing important'
+
 class Product: 
     def __init__(self): 
         print("Product instance Created") 

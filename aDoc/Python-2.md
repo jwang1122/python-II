@@ -32,6 +32,8 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 4. Database Access ([Sqlite](#Sqlite))
 5. Source Version Control ([Git](#Git))
 
+![Application 5 Parts](./images/Application.png)
+
 ## Table of Contents
 1. [Git](#Git)
 1. [assert](#assert)
@@ -58,6 +60,7 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 
 
 ## Git
+* ./machineLearning/startup.py; display package version 
 Source code version control
 * check git availability
 * get source code from GitHub
@@ -584,8 +587,14 @@ without if-else
 [Table of Contents](#Table-of-Contents)
 
 ## Understand Dunder Functions
+
+![Built in functions](./images/builtinFunctions.png)
+
 * dunder1.py; \_\_len__, \_\_gt__, \_\_eq__, \_\_contains__, \_\_add__
 * dunder2.py; implement \_\_call__(), make class callable
+* dunder3.py; make Product class callable \_\_call__, \_\_version__
+* dunder4.py; check module level version \_\_version__
+* __init__.py; package level version in \_\_init__.py file
 * classDecorator.py; 
 * limitUser.py; (using user.py) \_\_name__()
 * range1.py; \_\_next__, \_\_iter__ 
@@ -659,11 +668,28 @@ npm start
 1. [__init__](https://mikegrouchy.com/blog/be-pythonic-__init__py)
 1. [async task](https://docs.python.org/3/library/asyncio-task.html)
 1. [Machine Learning](https://scikit-learn.org)
+1. [Machine Learning Step by Step](https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
+1. [How to Index, Slice and Reshape NumPy Arrays for Machine Learning](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
+
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 ---
 [Table of Contents](#Table-of-Contents)
 
-* machine learning
+## Machine Learning
+
+![Machine Learning](./images/machineLearning.png)
+
+./machineLearning
+* setup.py; check version for all library
+* machine1.py
+* machine2.py
+* machine3.py
+* machine4.py
+* machine5.py
+* machine6.py
+
+[How to Index, Slice and Reshape NumPy Arrays for Machine Learning](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
+
     - sklearn
 ---
 老生
