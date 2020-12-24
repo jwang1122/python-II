@@ -261,6 +261,10 @@ pip install mypy
 * timerDecorator.py;
 * switch.py; use Month as dict
 * switcher.py; store function in dict
+* recursion1.py; simple but slow way
+* recursion2.py; cache the calculated value
+* recursion3.py; use existing tools to handle cache
+* recursion4.py; handle wrong input value
 ---
 [Table of Contents](#Table-of-Contents)
 
