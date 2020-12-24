@@ -15,6 +15,9 @@
     ![Learn from other's Mistake](./images/MistakesHis.jpeg)
 
 * Pay attention to error message, especially last line
+```
+ModuleNotFoundError: No module named 'matplotlib'
+```
 
 ```
 Traceback (most recent call last):
@@ -83,10 +86,20 @@ git checkout <branch name>
 ![Python Keywords](./images/python-keywords.png)
 
     - [Practice]: write program using keywords we have learned.
+./myassert
 * assert0.py
 * assert1.py
 * assert2.py
-* asyncTest.py
+* async1.py
+* async2.py
+* async3.py
+* async4.py
+* async5.py
+* async6.py
+* async7.py
+* yield1.py
+* yield2.py
+* yield3.py
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -164,6 +177,7 @@ git checkout <branch name>
 * student2.py; class Student(Person) using person1.py
 * person2.py; class Employee(Person)
 * student3.py; load csv file, build student objects
+    - [Practice]: create a super class and sub class
 * intervace
     - interface1.py; implementation class with no abstract function defined
     - interface2.py; Compare student by interface Comparable
@@ -211,6 +225,7 @@ pip install mypy
 * func3.py; return function from function conditionally
 * func4.py; use parameter generate different math function
     - [Practice]: define average function (assert1.py)
+    - [Practice]: pass function, return function
 
 * func5.py; use one function to do sample math
 * funcAttribute.py; getattr()
@@ -239,6 +254,8 @@ pip install mypy
 
 * logging1.py
     - [Practice]: add logging in simple math add, sub, mul, div
+    - [Practice]: write logging to card game
+
 ```py
 >>> import logging
 >>> help(logging)
@@ -641,25 +658,11 @@ npm start
 1. [Python typing](https://www.journaldev.com/34519/python-typing-module)
 1. [__init__](https://mikegrouchy.com/blog/be-pythonic-__init__py)
 1. [async task](https://docs.python.org/3/library/asyncio-task.html)
+1. [Machine Learning](https://scikit-learn.org)
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
 ---
 [Table of Contents](#Table-of-Contents)
 
-* Review
-    - Write unit test
-    [Practice]: test_dealer() -> test_hit()
-    - logging
-    [Practice]: write logging to card game
-    - card.py
-    [Practice]: create a super class and sub class
-    - Functional programing
-    [Practice]: pass function, return function
-    - lambda expression
-    - map, filter, sort, zip
-    - either, function binding
-    - sqlite
-
-[website](https://scikit-learn.org)
 * machine learning
     - sklearn
 ---
