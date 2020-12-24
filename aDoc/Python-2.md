@@ -124,15 +124,26 @@ git checkout <branch name>
 
 ## Python Document
 * use python help
+* help()
+    _ dir()
+    - dir(__spec__)  
+    - dir(__builtins__)
+
+[Python Document](pythonDocument.md)
+```
+python -m pydoc -p 3144
+b
+
+```
+* [built in functions](https://docs.python.org/3/library/functions.html)
 * create my own document
 ./aDoc
 * doc1.py; use """
 * circle1.py; use __doc__
 * simpleMath.py; document functions
-* help()
-    _ dir()
-    - dir(__spec__)  
-    - dir(__builtins__)
+
+[Homework 1](docHw1.md)
+
 * Write Markdown 
     - display link (website, Table of Content, other md file)
     - Greenshot (Greenshot-INSTALLER-1.2.10.6-RELEASE.exe)
@@ -140,6 +151,7 @@ git checkout <branch name>
     - command line (command block)
     - Python source code block
     - bullet point
+
 ---
 [Table of Contents](#Table-of-Contents)
 

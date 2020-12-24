@@ -1,3 +1,8 @@
+import inspect
+import os
+f = inspect.currentframe()
+i = inspect.getframeinfo(f)
+
 def div(x,y):
     """
     if the condition is not meet, program stop running
@@ -8,7 +13,7 @@ def div(x,y):
 try:
     z = div(10,0)
 except AssertionError as ae:
-    print("Error: ", ae)
+    print(f"{inspect.getframeinfo(f).lineno}: {'Error: ', ae}")
 
 
 
