@@ -7,8 +7,11 @@ from functools import lru_cache
 
 @lru_cache(maxsize=1000)
 def fibonacci(n):
-    if type(n) != int or n<0:
-        raise TypeError("n must be a positive integer!")
+    if type(n) != int:
+        raise TypeError("n must be a positive integer! but is %s" % type(n))
+    if n < 0:
+        raise ValueError("n must be a positive integer! but is %d" % n)
+
     if n==1 or n==2:
         return 1
     else:
@@ -23,4 +26,12 @@ except Exception as ex:
     import inspect
     cf = inspect.currentframe()
     print(f"{inspect.getframeinfo(cf).lineno}: {ex}")
+
+try:
+    print(f"{i}: {fibonacci('hello')}")
+except Exception as ex:
+    import inspect
+    cf = inspect.currentframe()
+    print(f"{inspect.getframeinfo(cf).lineno}: {ex}")
+
 print("Done.")
