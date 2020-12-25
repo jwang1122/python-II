@@ -54,7 +54,6 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 1. [either](#either)
 1. [monad](#monad)
 1. [Design Pattern](#Design-Pattern)
-1. [References](#References)
 1. [Machine Learning](#Machine-Learning)
 ---
 [Table of Contents](#Table-of-Contents)
@@ -129,6 +128,15 @@ git checkout <branch name>
     _ dir()
     - dir(__spec__)  
     - dir(__builtins__)
+```
+import datetime
+dir(datetime)
+dir(datetime.time)
+help(datetime.date)
+d1 = datetime.date(2020,1,1) 
+d1.isocalendar()
+d1.isoformat()
+```
 
 [Python Document](pythonDocument.md)
 ```
@@ -142,7 +150,27 @@ b
 * doc1.py; use """
 * circle1.py; use __doc__
 * simpleMath.py; document functions
+* Python playgraound
+```
+import simpleMath
+dir(simpleMath)
+help(simpleMath)
+help(simpleMath.add)
+```
+* Terminal
+```
+python -m pydoc
+python -m pydoc aDoc.simpleMath
+python -m pydoc math
+```
+The advantage of using pydoc is you don't need import the module first.
+* Search for keyword
+```
+python -m pydoc -k add
+python -m pydoc -k matplotlib
+python -m pydoc -k sql
 
+```
 [Homework 1](docHw1.md)
 
 * Write Markdown 
@@ -270,16 +298,28 @@ pip install mypy
 [Table of Contents](#Table-of-Contents)
 
 ## Logging
+* [Logging System](https://www.python.org/dev/peps/pep-0282)
+
+* Python playground
+
+```py
+import logging
+help(logging)
+```
+
 ./loggin
 
+* logging3.py (using logging2.py)
+* [Logging Configuration](https://docs.python.org/3/library/logging.config.html)
 * logging1.py
     - [Practice]: add logging in simple math add, sub, mul, div
     - [Practice]: write logging to card game
 
-```py
->>> import logging
->>> help(logging)
-```
+* [Logging Formatter](https://docs.python.org/3/library/logging.html?highlight=logging%20formatter#logging.Formatter)
+
+* [Share File](loggingFormatter.md)
+
+* [Logging Cookbook](https://docs.python.org/3/howto/logging-cookbook.html#logging-cookbook)
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -287,6 +327,11 @@ pip install mypy
 ## Try Except
     
 ![Try-except](./images/try-except.webp)
+
+Why we need to use try-except block?
+```py
+f = open('Errors.md')
+```
 * circle1.py
 * raise Error
 ```py
@@ -672,26 +717,6 @@ npm start
 ---
 [Table of Contents](#Table-of-Contents)
 
-## References
-1. [RxPY Document](https://rxpy.readthedocs.io/en/latest/index.html)
-1. [Python Interface](https://realpython.com/python-interface/)
-1. [__init__.py python package](https://docs.python.org/3/tutorial/modules.html)
-1. [Primer on python function](https://realpython.com/primer-on-python-decorators)
-1. [Observer Sample](https://www.tutorialspoint.com/rxpy/)
-1. [Hi-Low Card Game](https://stevepython.wordpress.com/2018/11/09/python-gui-card-game/)
-1. [Reactive X](https://blog.oakbits.com/introduction-to-rxpy.html)
-1. [Sqlite Tutorial](https://docs.python.org/3/library/sqlite3.html)
-1. [Python typing](https://www.journaldev.com/34519/python-typing-module)
-1. [__init__](https://mikegrouchy.com/blog/be-pythonic-__init__py)
-1. [async task](https://docs.python.org/3/library/asyncio-task.html)
-1. [Machine Learning](https://scikit-learn.org)
-1. [Machine Learning Step by Step](https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
-1. [How to Index, Slice and Reshape NumPy Arrays for Machine Learning](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
-
-1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
----
-[Table of Contents](#Table-of-Contents)
-
 ## Machine Learning
 
 ![Machine Learning](./images/machineLearning.png)
@@ -719,8 +744,6 @@ npm start
 ---
 [Table of Contents](#Table-of-Contents)
 
-
-    - sklearn
 ---
 老生
 总校

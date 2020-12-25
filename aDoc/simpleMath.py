@@ -1,5 +1,7 @@
 """
-Simple Math functions add(), sub(), mul(), div().
+Simple Math functions add(), sub(), mul(), div(). 
+There is no any type check for all functions which may cause unexpected result.
+
 """
 def add(x, y, /):
     """
