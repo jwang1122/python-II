@@ -55,6 +55,7 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 1. [monad](#monad)
 1. [Design Pattern](#Design-Pattern)
 1. [References](#References)
+1. [Machine Learning](#Machine-Learning)
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -703,8 +704,21 @@ npm start
 * machine4.py
 * machine5.py
 * machine6.py
+* machine7.py
+* machine8.py
+* machine9.py
+* machine10.py
+* machine11.py
+* machine12.py
+* machine13.py
+
+![Box Plot](./images/boxplot.jpg)
 
 [How to Index, Slice and Reshape NumPy Arrays for Machine Learning](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
+
+---
+[Table of Contents](#Table-of-Contents)
+
 
     - sklearn
 ---
