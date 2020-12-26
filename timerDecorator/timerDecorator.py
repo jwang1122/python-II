@@ -1,3 +1,6 @@
+"""
+Using Function decorator to check the performance of existing function.
+"""
 def my_timer(original):
     import time
 

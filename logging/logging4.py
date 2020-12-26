@@ -1,28 +1,16 @@
 import logging
-import logging.config
-import time
-import os
+log_format = '%(asctime)s %(levelname)s [%(name)s] - %(message)s::%(filename)s::%(lineno)d'
+logging.basicConfig(filename='mylogs.log', filemode='w', level=logging.DEBUG, format=log_format)
+logger = logging.getLogger('WANG')
 
-# read initial config file
-logging.config.fileConfig('./logging/logging.conf')
-
-# create and start listener on port 9999
-t = logging.config.listen(9999)
-t.start()
-
-logger = logging.getLogger('simpleExample')
+from circle1 import circle_area
 
 try:
-    # loop through logging calls to see the difference
-    # new configurations make, until Ctrl+C is pressed
-    while True:
-        logger.debug('debug message')
-        logger.info('info message')
-        logger.warning('warn message')
-        logger.error('error message')
-        logger.critical('critical message')
-        time.sleep(5)
-except KeyboardInterrupt:
-    # cleanup
-    logging.config.stopListening()
-    t.join()
+    area = circle_area(3.2)
+    print("10:",area)
+    area = circle_area(-2)
+    print("12:",area)
+except ValueError as err:
+    logger.critical('Error: wrong input value')
+
+print("Done.")

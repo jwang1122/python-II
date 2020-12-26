@@ -3,7 +3,7 @@ import logging2, logging
 logging.basicConfig()
 
 log = logging.getLogger("Logging3")
-log.setLevel(1)
+log.setLevel(logging.DEBUG)
 log.info("Starting my app")
 try:
         logging2.doIt()

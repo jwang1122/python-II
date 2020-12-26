@@ -1,8 +1,0 @@
-2020-12-25 11:55:04,118 INFO [WANG] - Error: wrong input value::logging1.py::14
-2020-12-25 11:55:04,119 INFO [MyApp] - Starting my app::logging3.py::7
-2020-12-25 11:55:04,119 ERROR [MyApp] - There was a problem.::logging3.py::11
-Traceback (most recent call last):
-  File "c:\Users\12818\workspace\python-II\logging\logging3.py", line 9, in <module>
-    logging1.doIt()
-AttributeError: module 'logging1' has no attribute 'doIt'
-2020-12-25 11:55:04,119 INFO [MyApp] - Ending my app::logging3.py::12

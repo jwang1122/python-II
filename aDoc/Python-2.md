@@ -144,6 +144,11 @@ python -m pydoc -p 3144
 b
 
 ```
+Search: decorator
+
+```
+python -m pydoc -w json
+```
 * [built in functions](https://docs.python.org/3/library/functions.html)
 * create my own document
 ./aDoc
@@ -298,6 +303,7 @@ pip install mypy
 [Table of Contents](#Table-of-Contents)
 
 ## Logging
+* [Python Logging](https://realpython.com/lessons/logging-python-introduction/)
 * [Logging System](https://www.python.org/dev/peps/pep-0282)
 
 * Python playground
@@ -311,10 +317,16 @@ help(logging)
 
 * logging3.py (using logging2.py)
 * [Logging Configuration](https://docs.python.org/3/library/logging.config.html)
-* logging1.py
+* logging1.py; use logging.basicConfig()
     - [Practice]: add logging in simple math add, sub, mul, div
     - [Practice]: write logging to card game
+* logging3.py; (use logging2.py and default configuration)
+* logging4.py; more information in the log message
+* logging5.py; (use logging.conf file to configure the logger)
 
+```py
+logging.config.fileConfig(fname, defaults=None, disable_existing_loggers=True)
+```
 * [Logging Formatter](https://docs.python.org/3/library/logging.html?highlight=logging%20formatter#logging.Formatter)
 
 * [Share File](loggingFormatter.md)

@@ -1,5 +1,21 @@
 # Logging Formatter Attribute Table
 
+```
+DEBUG
+INFO
+WARN
+ERROR
+CRITICAL
+```
+Level |Numeric value
+|---|---|
+CRITICAL |50
+ERROR |40
+WARNING |30
+INFO |20
+DEBUG |10
+NOTSET |0
+
 Attribute name | Format |Description
 |---|---|---|
 args |You shouldn’t need to format this yourself. |The tuple of arguments merged into msg to produce message, or a dict whose values are used for the merge (when there is only one argument, and it is a dictionary).

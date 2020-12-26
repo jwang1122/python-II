@@ -1,6 +1,6 @@
 import logging
 log = logging.getLogger("Logging2")
-log.setLevel(1)
+log.setLevel(logging.DEBUG)
 
 def doIt():
         log.debug("Doing stuff...")

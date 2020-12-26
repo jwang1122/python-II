@@ -39,7 +39,7 @@
 1. [Cycle Notation of Permutations](https://www.youtube.com/watch?v=MpKG6FmcIHk&list=RDCMUCW6TXMZ5Pq6yL6_k5NZ2e0Q&index=39)
 
 * YouTube Individual
-1. [Datatime](https://www.youtube.com/watch?v=RjMbCUpvIgw)
+1. [Python Datatime](https://www.youtube.com/watch?v=RjMbCUpvIgw)
 1. [Datatime Module](https://www.youtube.com/watch?v=RjMbCUpvIgw&t=33s)
 1. [pyDoc](https://www.youtube.com/watch?v=URBSvqib0xw)
 1. [Lambda Expression](https://www.youtube.com/watch?v=25ovCm9jKfA)
@@ -49,6 +49,7 @@
 1. [Python Sets](https://www.youtube.com/watch?v=sBvaPopWOmQ)
 1. [Python List](https://www.youtube.com/watch?v=AhSvKGTh28Q&t=266s)
 1. [Python Dict](https://www.youtube.com/watch?v=XCcpzWs-CI4&t=13s)
+1. [Python Dictionary](https://www.youtube.com/watch?v=XCcpzWs-CI4&t=26s)
 1. [Python JSon](https://www.youtube.com/watch?v=pTT7HMqDnJw&t=33s)
 1. [Python Random Number](https://www.youtube.com/watch?v=zWL3z7NMqAs)
 1. [Python if-elif-else](https://www.youtube.com/watch?v=f4KOjWS_KZs)

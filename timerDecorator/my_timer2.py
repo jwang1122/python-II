@@ -18,7 +18,7 @@ def my_timer(original):
 def display_info(name, age):
     import time
     time.sleep(2) # simulate long process function
-    print(f"20: display_info()... run with arguments: ({name}, {age})")
+    print(f"21: display_info()... run with arguments: ({name}, {age})")
     return age
 
 # Call the function as usual, because we use the decorator @my_timer

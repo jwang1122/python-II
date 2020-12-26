@@ -1,16 +1,12 @@
 import logging
-log_format = '%(asctime)s %(levelname)s [%(name)s] - %(message)s::%(filename)s::%(lineno)d'
-logging.basicConfig(filename='mylogs.log', filemode='w', level=logging.DEBUG, format=log_format)
-logger = logging.getLogger('WANG')
 
-from circle1 import circle_area
+LOG_FORMAT = "%(asctime)s %(levelname)8s - %(message)s"
+logging.basicConfig(filename=r"C:\Users\12818\workspace\python-II\jwang.log", level=logging.DEBUG,format=LOG_FORMAT)
+logger = logging.getLogger("Huaxia")
 
-try:
-    area = circle_area(3.2)
-    print("10:",area)
-    area = circle_area(-2)
-    print("12:",area)
-except ValueError as err:
-    logger.info('Error: wrong input value')
-
-print("Done.")
+logger.debug("My first debug message")
+logger.info("My first info message")
+logger.warning("My first warn message")
+logger.error("My first error message")
+logger.fatal("My first fatal message")
+print(logger.level)
