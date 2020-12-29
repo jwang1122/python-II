@@ -3,7 +3,7 @@ Traditional way to handle Exception
 """
 def add(x,y):
     if(type(x) not in [int, float]):
-        raise TypeError("x must be real number.")
+        raise TypeError(f"x must be real number. but x={x}")
         return
     return x + y
 

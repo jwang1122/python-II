@@ -35,6 +35,7 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 ![Application 5 Parts](./images/Application.png)
 
 ## Table of Contents
+√ 
 1. [Git](#Git)
 1. [assert](#assert)
 1. [Command Line Arguments](#Command-Line-Arguments)
@@ -258,6 +259,9 @@ pip install mypy
 * typing3.py
 * typing4.py
 * typing5.py
+* typing6.py; no run time error, but mypy find input data type mismatch
+* typing7.py; no way to check decorator function input data type
+* typing8.py; cannot check input arguments type by mypy
 
 [Typing Read Me](TypingReadMe.md)
 
@@ -299,6 +303,7 @@ pip install mypy
 * recursion2.py; cache the calculated value
 * recursion3.py; use existing tools to handle cache
 * recursion4.py; handle wrong input value
+* annotation1.py
 ---
 [Table of Contents](#Table-of-Contents)
 
@@ -339,6 +344,9 @@ logging.config.fileConfig(fname, defaults=None, disable_existing_loggers=True)
 ## Try Except
     
 ![Try-except](./images/try-except.webp)
+
+* tryExcept1.py; Basic structure
+* tryExcept2.py;
 
 Why we need to use try-except block?
 ```py

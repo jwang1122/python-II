@@ -1,4 +1,7 @@
 # Machine Learning Processing
+Machine learning (ML) is a branch of Artificial Intelligence (AI). The primary purpose of machine learning is to teach a program on how to train itself and learn from mistakes. The goal is for the program to continuously learn and develop the accuracy of its prediction without being regularly trained to do so. Here is a useful link if you’re interested in learning more.
+
+
 * det data
 * training
 * validation
