@@ -17,6 +17,7 @@
 1. [Machine Learning Step by Step](https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
 1. [How to Index, Slice and Reshape NumPy Arrays for Machine Learning](https://machinelearningmastery.com/index-slice-reshape-numpy-arrays-machine-learning-python/)
 1. [logging format](https://www.python.org)
+1. [Data Structures](https://www.javatpoint.com/data-structure-tutorial)
 
 ## Tools
 1. <img src="https://raw.githubusercontent.com/microsoft/vscode-python/main/images/variableexplorer.png" width="638" height="318" />
@@ -48,9 +49,9 @@
 1. [Python Dictionary](https://www.youtube.com/watch?v=XCcpzWs-CI4&t=26s)
 1. √ [Python Datatime](https://www.youtube.com/watch?v=RjMbCUpvIgw)
 1. √ [pyDoc](https://www.youtube.com/watch?v=URBSvqib0xw)
-1. [Python if-elif-else](https://www.youtube.com/watch?v=f4KOjWS_KZs)
-1. [Python Functions](https://www.youtube.com/watch?v=NE97ylAnrz4)
-1. [Python Text File](https://www.youtube.com/watch?v=4mX0uPQFLDU)
+1. √ [Python if-elif-else](https://www.youtube.com/watch?v=f4KOjWS_KZs)
+1. √ [Python Functions](https://www.youtube.com/watch?v=NE97ylAnrz4)
+1. √ [Python Text File](https://www.youtube.com/watch?v=4mX0uPQFLDU)
 1. [File](https://www.youtube.com/watch?v=4mX0uPQFLDU&t=41s)
 1. [Prime Numbers](https://www.youtube.com/watch?v=2p3kwF04xcA)
 1. [Python Prime Numbers](https://www.youtube.com/watch?v=2p3kwF04xcA&t=31s)
