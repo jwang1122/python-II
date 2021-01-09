@@ -30,26 +30,26 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 - [华夏中文学校 Python level-II](#华夏中文学校-python-level-ii)
   - [Table of Contents](#table-of-contents)
   - [Python 编写应用软件的几大要素](#python-编写应用软件的几大要素)
-  - [1. Git](#1-git)
-  - [2. assert](#2-assert)
-  - [3. Command Line Arguments](#3-command-line-arguments)
-  - [4. Python Document](#4-python-document)
+  - [Git](#git)
+  - [assert](#assert)
+  - [Command Line Arguments](#command-line-arguments)
+  - [Python Document](#python-document)
   - [5. enum](#5-enum)
   - [6. Try Except](#6-try-except)
-  - [7. Unit Test](#7-unit-test)
-  - [8. Understand Dunder Functions](#8-understand-dunder-functions)
-  - [9. Blackjack Card Game](#9-blackjack-card-game)
+  - [Unit Test](#unit-test)
+  - [Understand Dunder Functions](#understand-dunder-functions)
+  - [Blackjack Card Game](#blackjack-card-game)
   - [10. OOP Programming](#10-oop-programming)
   - [11. Type Sensitive](#11-type-sensitive)
   - [12. Functional Programming](#12-functional-programming)
-  - [13. Logging](#13-logging)
+  - [Logging](#logging)
   - [14. Lambda Expression](#14-lambda-expression)
   - [15. either](#15-either)
   - [16. monad](#16-monad)
     - [Concepts](#concepts)
   - [17. Rx Observer](#17-rx-observer)
   - [18. Design Pattern](#18-design-pattern)
-  - [19. Sqlite](#19-sqlite)
+  - [Sqlite](#sqlite)
   - [20. Machine Learning](#20-machine-learning)
 
 ---
@@ -69,7 +69,7 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
 [Table of Contents](#table-of-contents)
 
 
-## 1. Git
+## Git
 * ./machineLearning/startup.py; display package version 
 Source code version control
 * check git availability
@@ -95,7 +95,7 @@ git checkout <branch name>
 ---
 [Table of Contents](#table-of-contents)
 
-## 2. assert
+## assert
 ![Python Keywords](./images/python-keywords.png)
 
     - [Practice]: write program using keywords we have learned.
@@ -117,7 +117,7 @@ git checkout <branch name>
 ---
 [Table of Contents](#table-of-contents)
 
-## 3. Command Line Arguments
+## Command Line Arguments
 * What is __init__.py used for?
 >The primary use of __init__.py is to initialize Python packages. The easiest way to demonstrate this is to take a look at the structure of a standard Python module.
 
@@ -133,7 +133,7 @@ git checkout <branch name>
 [Table of Contents](#table-of-contents)
 
 
-## 4. Python Document
+## Python Document
 * use python help
 * help()
     _ dir()
@@ -311,7 +311,7 @@ do different test, show program terminated in the middle
 [Table of Contents](#table-of-contents)
 
 
-## 7. Unit Test
+## Unit Test
 * Configure VS Code Unit Test
     Right-Click > Command Pallete.. > Phthon: Configure Tests > unittest > Root director > test_*.py
 * test_Math.py
@@ -327,7 +327,7 @@ do different test, show program terminated in the middle
 ---
 [Table of Contents](#table-of-contents)
 
-## 8. Understand Dunder Functions
+## Understand Dunder Functions
 
 ![Built in functions](./images/builtinFunctions.png)
 
@@ -349,7 +349,7 @@ do different test, show program terminated in the middle
 ---
 [Table of Contents](#table-of-contents)
 
-## 9. Blackjack Card Game
+## Blackjack Card Game
 [How to Play Blackjack](https://www.blackjackapprenticeship.com/how-to-play-blackjack/#playerdecideshowtoplayhand)
 
 ![BlackJack](./images/BlackjackGame.jpg)
@@ -537,7 +537,7 @@ quicktype ./data/student.json -o student.py
 ---
 [Table of Contents](#table-of-contents)
 
-## 13. Logging
+## Logging
 * [Python Logging](https://realpython.com/lessons/logging-python-introduction/)
 * [Logging System](https://www.python.org/dev/peps/pep-0282)
 
@@ -717,7 +717,7 @@ foo
 [Table of Contents](#table-of-contents)
 
 
-## 19. Sqlite
+## Sqlite
 * sqlite0.py > create connection
 * sqlite1.py
 * sqlite2.py

@@ -68,7 +68,7 @@
 1. [URL library](https://www.youtube.com/watch?v=LosIGgon_KM)
 1. [Using Try/Except](https://www.youtube.com/watch?v=NIWwJbo-9_8)
 1. [Python Logging](https://www.youtube.com/watch?v=g8nQ90Hk328&t=232s)
-
+1. [Data Structure](https://www.youtube.com/watch?v=RBSGKlAvoiM&t=4s)
 ---
 老生
 总校
