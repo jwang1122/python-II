@@ -201,7 +201,7 @@ python -m pydoc -k sql
 [Table of Contents](#table-of-contents)
 
 
-## 5. enum
+## enum
 * enum1.py; Color extends from Enum, value, type...
 * enum2.py; key and value unique
 * enum3.py; duplicated key
@@ -223,7 +223,7 @@ python -m pydoc -k sql
 ---
 [Table of Contents](#table-of-contents)
 
-## 6. Try Except
+## Try Except
     
 ![Try-except](./images/try-except.webp)
 
@@ -435,7 +435,7 @@ without if-else
 ---
 [Table of Contents](#table-of-contents)
 
-## 10. OOP Programming
+## OOP Programming
 ![OOP design](./images/oop.png)
 
 ![Abstraction](./images/classDefine.png)
@@ -470,7 +470,7 @@ without if-else
 ---
 [Table of Contents](#table-of-contents)
 
-## 11. Type Sensitive
+## Type Sensitive
 ./typing
 ```
 pip install mypy
@@ -497,7 +497,7 @@ quicktype ./data/student.json -o student.py
 ---
 [Table of Contents](#table-of-contents)
 
-## 12. Functional Programming
+## Functional Programming
 ./function
 * variableArgs.py; variable arguments
 * func.py; pass function to function, return function from function
@@ -573,7 +573,7 @@ logging.config.fileConfig(fname, defaults=None, disable_existing_loggers=True)
 
 
 
-## 14. Lambda Expression
+## Lambda Expression
 ![Lambda Function](./images/lambda.png)
     - >>> dir(__builtins__) > map, filter, reduce (no loop)
     - >>> help(map) > map(function, iterable, ...)
@@ -616,7 +616,7 @@ logging.config.fileConfig(fname, defaults=None, disable_existing_loggers=True)
 [Table of Contents](#table-of-contents)
 
 
-## 15. either
+## either
 * either1.py; isEven() function return Either Right or Left
 * either2.py; isEven() check input data type
 * either3.py; bind multiple functions
@@ -662,7 +662,7 @@ logging.config.fileConfig(fname, defaults=None, disable_existing_loggers=True)
 ---
 [Table of Contents](#table-of-contents)
 
-## 17. Rx Observer
+## Rx Observer
 * observer0.py; typical observer function chain
 * observer1.py; simple way to create observer iterable
 * observer2.py; operators function chain with pipe (map > filter)
@@ -699,7 +699,7 @@ foo
 [Table of Contents](#table-of-contents)
 
 
-## 18. Design Pattern
+## Design Pattern
 * command.py
 * command5.py
 * decorator.py
@@ -764,7 +764,7 @@ npm start
 ---
 [Table of Contents](#table-of-contents)
 
-## 20. Machine Learning
+## Machine Learning
 
 ![Machine Learning](./images/machineLearning.png)
 
