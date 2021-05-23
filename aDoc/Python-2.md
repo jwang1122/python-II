@@ -34,23 +34,23 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
   - [assert](#assert)
   - [Command Line Arguments](#command-line-arguments)
   - [Python Document](#python-document)
-  - [5. enum](#5-enum)
-  - [6. Try Except](#6-try-except)
+  - [enum](#enum)
+  - [Try Except](#try-except)
   - [Unit Test](#unit-test)
   - [Understand Dunder Functions](#understand-dunder-functions)
   - [Blackjack Card Game](#blackjack-card-game)
-  - [10. OOP Programming](#10-oop-programming)
-  - [11. Type Sensitive](#11-type-sensitive)
-  - [12. Functional Programming](#12-functional-programming)
+  - [OOP Programming](#oop-programming)
+  - [Type Sensitive](#type-sensitive)
+  - [Functional Programming](#functional-programming)
   - [Logging](#logging)
-  - [14. Lambda Expression](#14-lambda-expression)
-  - [15. either](#15-either)
+  - [Lambda Expression](#lambda-expression)
+  - [either](#either)
   - [16. monad](#16-monad)
     - [Concepts](#concepts)
-  - [17. Rx Observer](#17-rx-observer)
-  - [18. Design Pattern](#18-design-pattern)
+  - [Rx Observer](#rx-observer)
+  - [Design Pattern](#design-pattern)
   - [Sqlite](#sqlite)
-  - [20. Machine Learning](#20-machine-learning)
+  - [Machine Learning](#machine-learning)
 
 ---
 [Table of Contents](#table-of-contents)
@@ -227,6 +227,8 @@ python -m pydoc -k sql
     
 ![Try-except](./images/try-except.webp)
 
+![Try Except](./images/try-except.svg)
+
 * tryExcept1.py; Basic structure
 * tryExcept2.py;
 
@@ -266,6 +268,7 @@ except Exception as error:
 * try-expectTest1.py; every function add try-expect
 * try-expectTest2.py; one function 
 * assert error
+* 
 ./myassert
 * assert0.py
 * assert1.py
@@ -700,7 +703,24 @@ foo
 
 
 ## Design Pattern
-* command.py
+[Design pattern](python_design_patterns_tutorial.pdf)
+
+Everythin has patter. 有机物，生物，人，动物，Python源程序..., json file, csv file, html code..., 产品标准化,
+
+Cambridge Dictionary：
+pattern：a particular way in which something is done, is organized, or happens:
+
+* objectPtn.py; python class 本身就是一个pattern（制造标准）
+* iterator.py; iterator generator > yield'
+* singleton.py;
+    ```mermaid
+    graph TD
+    n1[new instance 1] --> Single[Single instance]
+    n2[new intance 2] --> Single
+    n3[new instancd 3] --> Single
+    ```
+* factory.py
+* command.py;
 * command5.py
 * decorator.py
 * decorator0.py
@@ -708,7 +728,6 @@ foo
 * decorator2.py
 * decorator3.py
 * decorator4.py
-* iterator.py
 * observer.py
 * strategy.py
 * strategy2.py
