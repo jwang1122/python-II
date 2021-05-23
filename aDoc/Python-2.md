@@ -704,13 +704,21 @@ foo
 
 ## Design Pattern
 [Design pattern](python_design_patterns_tutorial.pdf)
+[Design pattern website](https://www.tutorialspoint.com/python_design_patterns/index.htm)
 
-Everythin has patter. 有机物，生物，人，动物，Python源程序..., json file, csv file, html code..., 产品标准化,
+Everything has patter. 有机物，生物，人，动物，Python源程序..., json file, csv file, html code..., 产品标准化,
 
 Cambridge Dictionary：
 pattern：a particular way in which something is done, is organized, or happens:
 
 * objectPtn.py; python class 本身就是一个pattern（制造标准）
+* decorator.py
+* decorator0.py
+* decorator1.py
+* decorator2.py
+* decorator3.py
+* decorator4.py
+* observer.py
 * iterator.py; iterator generator > yield'
 * singleton.py;
     ```mermaid
@@ -719,16 +727,44 @@ pattern：a particular way in which something is done, is organized, or happens:
     n2[new intance 2] --> Single
     n3[new instancd 3] --> Single
     ```
-* factory.py
+* factory1.py; understand globals() function
+* factory2.py; factory pattern
+* factory3.py; use factory and initialize attributes
+* factory4.py; use **kwargs to initialize attributes
+* builder.py;
+* prototype.py;
 * command.py;
+    ```mermaid
+    classDiagram
+    CommandInterface <|-- Command
+    <<interface>> CommandInterface
+    CommandInterface: execute()
+    class Command{
+        execute()
+    }
+    Client -- Command
+    Client -- Receiver
+    Receiver -- Command
+    ```
 * command5.py
-* decorator.py
-* decorator0.py
-* decorator1.py
-* decorator2.py
-* decorator3.py
-* decorator4.py
-* observer.py
+* adapter.py
+* proxy.py
+    ```mermaid
+    classDiagram
+    Abstract <-- Client : to proxy
+    class Abstract {
+        +operation()
+    }
+    class Proxy_Remote {
+        +operations()
+    }
+    Abstract <|-- Proxy_Remote
+    class RealSubject{
+        +operations()
+    }
+    Abstract <|-- RealSubject
+    
+    ```
 * strategy.py
 * strategy2.py
 
