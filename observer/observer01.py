@@ -56,6 +56,11 @@ class Subject(AbstractSubject):
     def detach(self, abstractobserver: AbstractObserver) -> None:
         self.observers.remove(abstractobserver)
 
+    def __repr__(self):
+        names = ''
+        for observer in self.observers:
+            names += observer.name + ', '
+        return names
     """
     The subscription management methods.
     """
@@ -122,13 +127,16 @@ if __name__ == "__main__":
     # The client code.
 
     subject = Subject()
+    subject1 = Subject() # another instance of the subject
 
-    observer_a = ObserverA("Abstractobserver-A")
+    observer_a = ObserverA("Observer-A")
     subject.attach(observer_a)
 
-    observer_b = ObserverB("Abstractobserver-B")
+    observer_b = ObserverB("Observer-B")
     subject.attach(observer_b)
 
+    print(f"Suject: {subject}")
+    print(f"Suject1: {subject1}")
     subject.some_business_logic()
     subject.some_business_logic()
     subject.some_business_logic()
@@ -136,3 +144,6 @@ if __name__ == "__main__":
     subject.detach(observer_a)
 
     subject.some_business_logic()
+
+    print(f"Suject: {subject}")
+    print(f"Suject1: {subject1}")
