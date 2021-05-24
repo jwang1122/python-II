@@ -742,6 +742,13 @@ Everything has patter. 有机物，生物，人，动物，Python源程序..., j
 Cambridge Dictionary：
 pattern：a particular way in which something is done, is organized, or happens:
 
+Design patterns are typical solutions to common problems
+in software design. Each pattern is like a blueprint
+that you can customize to solve a particular
+design problem in your code.
+    - Creational patterns
+    - Structural patterns
+    - Behavioral patterns
 * objectPtn.py; python class 本身就是一个pattern（制造标准）
 * decorator.py
 * decorator0.py
@@ -749,7 +756,7 @@ pattern：a particular way in which something is done, is organized, or happens:
 * decorator2.py
 * decorator3.py
 * decorator4.py
-* observer.py
+* observer01.py; General concept of observer pattern
 
 [Observer pattern webside](https://refactoring.guru/design-patterns/observer/python/example)
 
@@ -785,6 +792,8 @@ AbstractObserver <|-- ObserverA
 AbstractObserver <|-- ObserverB
 
 ```
+* observer2.py; class level attribute in Subject class
+* observerRx1.py; ReactiveX implementation of observer pattern
 * iterator.py; iterator generator > yield'
 * singleton.py;
     ```mermaid
