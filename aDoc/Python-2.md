@@ -750,28 +750,39 @@ pattern：a particular way in which something is done, is organized, or happens:
 * decorator3.py
 * decorator4.py
 * observer.py
+
+[Observer pattern webside](https://refactoring.guru/design-patterns/observer/python/example)
+
 ```mermaid
 classDiagram
-class Subject{
-    observers:Observer[]
+class AbstractSubject{
     +attach()
     +detach()
     +notify()
 }
-class Observer{
+class Subject{
+    observers:AbstractObserver[]
+    +attach()
+    +detach()
+    +notify()
+}
+<<interface>> AbstractSubject
+AbstractSubject <|-- Subject
+Subject --> AbstractObserver:attach/dettach
+class AbstractObserver{
     +update()
 }
-<<interface>> Observer
-Subject o-- Observer
-Observer --> Subject:attach/detach
+<<interface>> AbstractObserver
+AbstractObserver <|-- ObserverA
+Subject o-- AbstractObserver
 class ObserverA{
     +update()
 }
 class ObserverB{
     +update()
 }
-Observer <|-- ObserverA
-Observer <|-- ObserverB
+AbstractObserver <|-- ObserverA
+AbstractObserver <|-- ObserverB
 
 ```
 * iterator.py; iterator generator > yield'
