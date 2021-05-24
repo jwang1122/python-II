@@ -50,6 +50,7 @@ TypeError: Can't instantiate abstract class Card with abstract method getValue
   - [Rx Observer](#rx-observer)
   - [Design Pattern](#design-pattern)
   - [Sqlite](#sqlite)
+  - [Multithreading](#multithreading)
   - [Machine Learning](#machine-learning)
 
 ---
@@ -360,6 +361,36 @@ do different test, show program terminated in the middle
 ![BlackJack Card Values](./images/Blackjack-values.png)
 
 ![Black Jack Class Diagram](./images/BlackJackCardGame.png)
+```mermaid
+classDiagram
+class Card{;
+    face:str;
+    suit:str;
+}
+class Deck{;
+    cards: Card[];
+    shuffle();
+    getCard();
+}
+class Player{;
+    name:str;
+    hand: Card[];
+    hit();
+    getValue();
+}
+Player <|-- Dealer
+Deck o-- Card
+Dealer o-- Deck
+```
+
+```mermaid
+graph LR;
+A--> B & C & D;
+ B--> A & E;
+C--> A & E;
+D--> A & E;
+E--> B & C & D;
+```
 
 ./Blackjack
 * turtle7.py; draw card on frame
@@ -719,6 +750,30 @@ pattern：a particular way in which something is done, is organized, or happens:
 * decorator3.py
 * decorator4.py
 * observer.py
+```mermaid
+classDiagram
+class Subject{
+    observers:Observer[]
+    +attach()
+    +detach()
+    +notify()
+}
+class Observer{
+    +update()
+}
+<<interface>> Observer
+Subject o-- Observer
+Observer --> Subject:attach/detach
+class ObserverA{
+    +update()
+}
+class ObserverB{
+    +update()
+}
+Observer <|-- ObserverA
+Observer <|-- ObserverB
+
+```
 * iterator.py; iterator generator > yield'
 * singleton.py;
     ```mermaid
@@ -767,6 +822,9 @@ pattern：a particular way in which something is done, is organized, or happens:
     ```
 * strategy.py
 * strategy2.py
+* template.py
+* queuePattern.py
+* stackPattern.py
 
 ---
 [Table of Contents](#table-of-contents)
@@ -818,6 +876,8 @@ npm start
 ```
 ---
 [Table of Contents](#table-of-contents)
+
+## Multithreading
 
 ## Machine Learning
 
