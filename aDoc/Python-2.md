@@ -792,7 +792,7 @@ AbstractObserver <|-- ObserverA
 AbstractObserver <|-- ObserverB
 
 ```
-* observer2.py; class level attribute in Subject class
+* observer02.py; class level attribute in Subject class
 * observerRx1.py; ReactiveX implementation of observer pattern
 * Model-View-Control pattern
   
@@ -802,13 +802,16 @@ AbstractObserver <|-- ObserverB
     view.py; display model data
     control.py; handle loading and display data.
 * iterator.py; iterator generator > yield'
-* singleton.py;
+* singleton1.py;
     ```mermaid
     graph TD
     n1[new instance 1] --> Single[Single instance]
     n2[new intance 2] --> Single
     n3[new instancd 3] --> Single
     ```
+* singleton2.py
+* singleton3.py
+    Someone said, there is no need for singleton in python by using function in the module without any class. (in other word, function is singleton.) 
 * factory1.py; understand globals() function
 * factory2.py; factory pattern
 * factory3.py; use factory and initialize attributes
